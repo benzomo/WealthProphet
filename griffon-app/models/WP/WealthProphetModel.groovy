@@ -1,9 +1,10 @@
 package WP
 
 import griffon.core.artifact.GriffonModel
+import javafx.collections.ObservableArray
 import griffon.transform.Observable
 import groovy.beans.Bindable
-import griffon.transform.FXObservable
+import groovyx.javafx.beans.FXBindable
 import griffon.transform.PropertyListener
 import javafx.collections.FXCollections
 import griffon.transform.FXObservable
@@ -31,6 +32,14 @@ class WealthProphetModel {
             a, b, c, d, e
     )
 
+    @FXObservable def f = new MonthlyExpense("Rent", "1500")
+    @FXObservable ObservableList<MonthlyExpense> data2 = FXCollections.observableArrayList(
+            f, f, f, f, f
+    )
+    @FXObservable def g = new YearlyIncome("typr1", "55000")
+    @FXObservable ObservableList<YearlyIncome> dataYinc = FXCollections.observableArrayList(
+            g, g, g
+    )
 
     @FXObservable def a = new Person("0.03", "0.02", "0.01")
     @FXObservable def b = new Person("Isabella", "Johnson", "isabella.johnson@example.com")
@@ -44,13 +53,40 @@ class WealthProphetModel {
 
     @FXObservable def globalVarsR = new GlobalVarsREAL(0.02, 0.04, 0.05, 0.05, 0.05, 0.05, 0.16, 0.04, 0.075)
     @FXObservable def varsG = new GlobalVarsRCol("0.02", "0.04", "0.05", "0.05", "0.05", "0.05", "0.16", "0.04", "0.075")
-    @FXObservable def varsG_str = new Gvars_str("0.02", "0.04", "0.05", "0.05", "0.05", "0.05", "0.16", "0.04", "0.075")
+    @FXObservable def varsG_str = new Gvars_str("0.02", "0.035", "0.05", "0.05", "0.05", "0.05", "0.16", "0.04", "0.075")
     @FXObservable def varsG_num = varsG.gv
 
 
     @FXObservable ObservableList<Gvars_str> data1 = FXCollections.observableArrayList(
             varsG_str,  varsG_str,  varsG_str,  varsG_str
    )
+
+}
+
+@FXBindable
+class MonthlyExpense{
+
+    String type
+    String value
+
+    public MonthlyExpense(String typeIN, String valueIN){
+        this.type = typeIN
+        this.value = valueIN
+    }
+
+}
+
+
+@FXBindable
+class YearlyIncome{
+
+    String type
+    String value
+
+    public YearlyIncome(String typeIN, String valueIN){
+        this.type = typeIN
+        this.value = valueIN
+    }
 
 }
 
@@ -205,17 +241,17 @@ public class GlobalVarsREAL {
 @FXObservable public class GlobalVarsRCol{
 
     public GlobalVarsREAL gv
-    private final SimpleStringProperty infl
-    private final SimpleStringProperty i
-    private final SimpleStringProperty iLoC
-    private final SimpleStringProperty iLoan
-    private final SimpleStringProperty iStLoan
-    private final SimpleStringProperty iCarLoan
-    private final SimpleStringProperty icc
-    private final SimpleStringProperty rBond
-    private final SimpleStringProperty rStock
+    public final SimpleStringProperty infl
+    public final SimpleStringProperty i
+    public final SimpleStringProperty iLoC
+    public final SimpleStringProperty iLoan
+    public final SimpleStringProperty iStLoan
+    public final SimpleStringProperty iCarLoan
+    public final SimpleStringProperty icc
+    public final SimpleStringProperty rBond
+    public final SimpleStringProperty rStock
 
-    private GlobalVarsRCol(String INFL, String I, String ILOC, String ILOAN, String ISTLOAN, String ICARLOAN, String ICC, String RBOND, String RSTOCK) {
+    public GlobalVarsRCol(String INFL, String I, String ILOC, String ILOAN, String ISTLOAN, String ICARLOAN, String ICC, String RBOND, String RSTOCK) {
         this.gv = new GlobalVarsREAL(INFL.toBigDecimal(),  I.toBigDecimal(),  ILOC.toBigDecimal(),  ILOAN.toBigDecimal(),  ISTLOAN.toBigDecimal(),  ICARLOAN.toBigDecimal(), ICC.toBigDecimal(),  RBOND.toBigDecimal(),  RSTOCK.toBigDecimal())
         this.infl = new SimpleStringProperty(INFL)
         this.i = new SimpleStringProperty(I)
@@ -229,10 +265,10 @@ public class GlobalVarsREAL {
     }
 
 
-    public getInfl() {
+    public getinfl() {
         return infl.get();
     }
-    public void setInfl(infl1) {
+    public void setinfl(infl1) {
         infl.set(infl1);
     }
 

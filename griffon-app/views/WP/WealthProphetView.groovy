@@ -3,6 +3,7 @@ package WP
 import griffon.core.artifact.GriffonView
 import griffon.inject.MVCMember
 import griffon.metadata.ArtifactProviderFor
+import griffon.transform.FXObservable
 import javafx.scene.control.cell.TextFieldListCell
 
 import javax.annotation.Nonnull
@@ -18,6 +19,7 @@ import javafx.event.EventHandler
 import javafx.scene.control.TableColumn.CellEditEvent
 import javafx.scene.control.cell.TextFieldTableCell
 import javafx.event.Event
+import groovyx.javafx.beans.FXBindable
 
 
 @ArtifactProviderFor(GriffonView)
@@ -32,7 +34,7 @@ class WealthProphetView {
 
             scene(id: 'sc3', fill: "#FFCCE5") {
 
-                v = vbox(prefHeight: 600.0, prefWidth: 900.0){
+                v = vbox(prefHeight: 800.0, prefWidth: 1200.0){
                     menuBar(vgrow: 'NEVER'){
 
                         menu(text: "File"){
@@ -82,17 +84,43 @@ class WealthProphetView {
                                     anchorPane( minHeight: 0.0 ,minWidth: 0.0 ,prefHeight: 290.0, prefWidth: 463.0) {
                                         hbox(layoutX: 6.0, layoutY: 1.0, prefHeight: 25.0, prefWidth: 150.0)
                                         accordion(layoutY: 25.0, prefHeight: 253.0, prefWidth: 150.0, bottomAnchor: 0.0, leftAnchor: 0.0, rightAnchor: 0.0, topAnchor: 0.0) {
-                                            titledPane(animated: false, text: "untitled 1") {
+                                            titledPane(animated: false, text: "Yearly Income") {
                                                 anchorPane(minHeight: 0.0, minWidth: 0.0, prefHeight: 190.0, prefWidth: 90.0) {
 
-                                                    tableView(layoutX: 31.6, layoutY: 10.6, prefHeight: 152.0, prefWidth: 200.0, bottomAnchor: 0.0, leftAnchor: 0.0, rightAnchor: 0.0, topAnchor: 0.0) {
-                                                        tableColumn(minWidth: 0.0, prefWidth: 64.00000154972076, text: "C1")
-                                                        tableColumn(prefWidth: 88.99999237060547, text: "C2")
+                                                    vbox(layoutX: 31.6, layoutY: 10.6, prefHeight: 152.0, prefWidth: 200.0, bottomAnchor: 0.0, leftAnchor: 0.0, rightAnchor: 0.0, topAnchor: 0.0) {
+                                                        yInc = tableView(layoutX: 31.6, layoutY: 10.6, prefHeight: 180.0, prefWidth: 200.0, bottomAnchor: 0.0, leftAnchor: 0.0, rightAnchor: 0.0, topAnchor: 0.0) {
+                                                            tcTxtInc = tableColumn(minWidth: 0.0, prefWidth: 64.00000154972076, text: "Description")
+                                                            tcTxtInc.setCellValueFactory(
+                                                                    new PropertyValueFactory<YearlyIncome, String>("type"))
+                                                            tcValInc = tableColumn(prefWidth: 88.99999237060547, text: "Yearly Income (\$)")
+                                                            tcValInc.setCellValueFactory(
+                                                                    new PropertyValueFactory<YearlyIncome, String>("value"))
+                                                        }
+                                                        yInc.setItems(model.dataYinc)
+
+                                                        label(text: "Enter Description")
+                                                        def txtinc = textField()
+                                                        txtinc.setPromptText("ex. 'Rental Income'")
+                                                        label(text: "Enter Value")
+                                                        def valinc = textField()
+                                                        valinc.setPromptText("ex. '18000'  (1500*12)")
+
+                                                        butADDinc = button(text: "ADD", prefWidth: 200.0).setOnAction(new EventHandler<ActionEvent>() {
+                                                            @Override
+                                                            public void handle(ActionEvent e) {
+                                                                model.dataYinc.add(new YearlyIncome(txtinc.getText(), valinc.getText()))
+                                                                txtinc.clear()
+                                                                valinc.clear()
+                                                            }
+                                                        })
+
                                                     }
+
                                                 }
 
+
                                             }
-                                            titledPane(animated: false, text: "untitled 2") {
+                                            titledPane(animated: false, text: "Capital Income") {
                                                 anchorPane(minHeight: 0.0, minWidth: 0.0, prefHeight: 180.0, prefWidth: 200.0) {
                                                     tableView(prefHeight: 177.0, prefWidth: 148.0, bottomAnchor: 0.0, leftAnchor: 0.0, rightAnchor: 0.0, topAnchor: 0.0) {
                                                         tableColumn(minWidth: 0.0, prefWidth: 65.00000154972076, text: "C1")
@@ -102,15 +130,7 @@ class WealthProphetView {
                                                 }
 
                                             }
-                                            titledPane(animated: false, text: "untitled 3") {
-                                                anchorPane(minHeight: 0.0, minWidth: 0.0, prefHeight: 180.0, prefWidth: 200.0) {
-                                                    tableView(prefHeight: 177.0, prefWidth: 148.0, bottomAnchor: 0.0, leftAnchor: 0.0, rightAnchor: 0.0, topAnchor: 0.0){
-                                                        tableColumn(minWidth: 0.0, prefWidth: 67.00000154972076, text: "C1")
-                                                        tableColumn(prefWidth: 84.99999237060547, text: "C2")
-                                                    }
 
-                                                }
-                                            }
                                         }
                                     }
                                     anchorPane( minHeight: 0.0 ,minWidth: 0.0 ,prefHeight: 290.0, prefWidth: 463.0) {
@@ -272,7 +292,7 @@ class WealthProphetView {
                         tableColumn(id: 'firstNameCol')
                         firstNameCol.setMinWidth(100);
                         firstNameCol.setCellValueFactory(
-                                new PropertyValueFactory<Gvars_str, String>("infl"))
+                                new PropertyValueFactory<Person, String>("firstName"))
                         firstNameCol.setCellFactory(TextFieldTableCell.forTableColumn());
                         firstNameCol.setOnEditCommit(
                                 new EventHandler<CellEditEvent<Person, String>>() {
@@ -280,7 +300,7 @@ class WealthProphetView {
                                     public void handle(CellEditEvent<Person, String> t) {
                                         ((Person) t.getTableView().getItems().get(
                                                 t.getTablePosition().getRow())
-                                        ).setFirstName(t.getNewValue());
+                                        ).firstName = t.getNewValue()
                                     }
                                 }
                         );
@@ -288,22 +308,48 @@ class WealthProphetView {
                         tableColumn(id: 'lastNameCol')
                         lastNameCol.setMinWidth(100);
                         lastNameCol.setCellValueFactory(
-                                new PropertyValueFactory<Gvars_str, String>("i"))
+                                new PropertyValueFactory<Person, String>("lastName"))
 
                         tableColumn(id: 'emailCol')
                         emailCol.setMinWidth(200);
                         emailCol.setCellValueFactory(
-                                new PropertyValueFactory<Gvars_str, String>("rStock"))
+                                new PropertyValueFactory<Person, String>("email"))
 
                     }
-                    z.setItems(model.data1)
-                    hbox(prefHeight: 200.0, prefWidth: 175.0){
-                        l1 = listView(editable: true)
-                        l1.getItems().addAll("Inflation", "Interest (Secured)", "Interest (LoC)", "Interest (Loan)", "Interest (Student)", "Interest (Car)", "Interest (Credit Card)", "Return (Bonds)", "Return (Stocks)" )
-                        l2 = listView(editable: true)
-                        l2.getItems().addAll(model.varsG_str.infl, model.varsG_str.i, model.varsG_str.iLoC, model.varsG_str.iLoan, model.varsG_str.iStLoan, model.varsG_str.iCarLoan, model.varsG_str.icc, model.varsG_str.rBond, model.varsG_str.rStock )
-                    }
+                    z.setItems(model.data)
 
+                    zz = tableView(editable: true) {
+                        tableColumn(id: 'typeCol')
+                        typeCol.setMinWidth(100);
+                        typeCol.setCellValueFactory(
+                                new PropertyValueFactory<MonthlyExpense, String>("type"))
+
+
+                        tableColumn(id: 'valueCol')
+                        valueCol.setMinWidth(100)
+                        valueCol.setCellFactory(TextFieldTableCell.forTableColumn())
+                        valueCol.setCellValueFactory(
+                                new PropertyValueFactory<MonthlyExpense, String>("value"))
+                        valueCol.setOnEditCommit(
+                                new EventHandler<CellEditEvent<MonthlyExpense, String>>() {
+                                    @Override
+                                    public void handle(CellEditEvent<MonthlyExpense, String> t) {
+                                        ((MonthlyExpense) t.getTableView().getItems().get(
+                                                t.getTablePosition().getRow())
+                                        ).value = t.getNewValue()
+                                    }
+                                })
+                    }
+                    zz.setItems(model.data2)
+
+                    vbox(prefWidth: 175.0) {
+                        hbox(prefHeight: 225.0) {
+                            l1 = listView(editable: true, prefWidth: 125)
+                            l1.getItems().addAll("Inflation", "Interest (Secured)", "Interest (LoC)", "Interest (Loan)", "Interest (Student)", "Interest (Car)", "Interest (Credit Card)", "Return (Bonds)", "Return (Stocks)")
+                            l2 = listView(editable: true, prefWidth: 50)
+                            l2.getItems().addAll(model.varsG_str.infl, model.varsG_str.i, model.varsG_str.iLoC, model.varsG_str.iLoan, model.varsG_str.iStLoan, model.varsG_str.iCarLoan, model.varsG_str.icc, model.varsG_str.rBond, model.varsG_str.rStock)
+                        }
+                    }
 
 
 
@@ -339,7 +385,7 @@ class WealthProphetView {
             }
 
             st = stage(title: 'GroovyFX Hello World', visible: true)
-            st.setScene(sc1)
+            st.setScene(sc3)
 
             //st1.hide()
 
