@@ -90,6 +90,119 @@ class YearlyIncome{
 
 }
 
+@FXBindable
+class Infl{
+
+    String type
+    String value
+
+    public YearlyIncome(String typeIN, String valueIN){
+        this.type = typeIN
+        this.value = valueIN
+    }
+
+}
+@FXBindable
+class I{
+
+    String type
+    String value
+
+    public YearlyIncome(String typeIN, String valueIN){
+        this.type = typeIN
+        this.value = valueIN
+    }
+
+}
+
+@FXBindable
+class ILoC{
+
+    String type
+    String value
+
+    public YearlyIncome(String typeIN, String valueIN){
+        this.type = typeIN
+        this.value = valueIN
+    }
+
+}
+@FXBindable
+class ILoan{
+
+    String type
+    String value
+
+    public YearlyIncome(String typeIN, String valueIN){
+        this.type = typeIN
+        this.value = valueIN
+    }
+
+}
+@FXBindable
+class IStLoan{
+
+    String type
+    String value
+
+    public YearlyIncome(String typeIN, String valueIN){
+        this.type = typeIN
+        this.value = valueIN
+    }
+
+}
+@FXBindable
+class ICarLoan{
+
+    String type
+    String value
+
+    public YearlyIncome(String typeIN, String valueIN){
+        this.type = typeIN
+        this.value = valueIN
+    }
+
+}
+
+@FXBindable
+class Icc{
+
+    String type
+    String value
+
+    public YearlyIncome(String typeIN, String valueIN){
+        this.type = typeIN
+        this.value = valueIN
+    }
+
+}
+
+@FXBindable
+class RBond{
+
+    String type
+    String value
+
+    public YearlyIncome(String typeIN, String valueIN){
+        this.type = typeIN
+        this.value = valueIN
+    }
+
+}
+
+@FXBindable
+class RStock{
+
+    String type
+    String value
+
+    public YearlyIncome(String typeIN, String valueIN){
+        this.type = typeIN
+        this.value = valueIN
+    }
+
+}
+
 
 
 // set the global variables
