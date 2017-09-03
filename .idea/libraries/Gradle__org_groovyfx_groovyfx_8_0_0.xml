@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gradle: org.groovyfx:groovyfx:8.0.0">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/groovyfx/groovyfx/8.0.0/groovyfx-8.0.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

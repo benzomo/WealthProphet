@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.codehaus.griffon:griffon-javafx-test:2.12.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.codehaus.griffon/griffon-javafx-test/2.12.0/69532f031772bb931b42be26879aa9325c6eeb69/griffon-javafx-test-2.12.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.codehaus.griffon/griffon-javafx-test/2.12.0/17631848c944d432d9c393fbc14e2145182bbaf3/griffon-javafx-test-2.12.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
