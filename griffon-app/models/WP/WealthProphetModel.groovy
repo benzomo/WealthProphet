@@ -15,6 +15,8 @@ import javafx.collections.ObservableList
 import javafx.beans.property.StringProperty
 import javax.annotation.Nonnull
 
+
+
 @ArtifactProviderFor(GriffonModel)
 class WealthProphetModel {
 
@@ -26,13 +28,22 @@ class WealthProphetModel {
     //_________INITIALIZE!!!!!!!!!!_______________
 
 
+    @FXObservable currScene = 0
 
+
+    Map rates = [infl: "0.02", i: "0.035", iLoC: "0.05", iLoan: "0.05", iStLoan: "0.06", iCarLoan: "0.045", icc: "0.15", rBond: "0.035", rStock: "0.06", deprCar: "0.1", deprHouse: "0.01"]
+
+    @FXBindable def xx = Calc.collectRates(rates)
+    @FXObservable ObservableList<RatesStr> dataRates = FXCollections.observableArrayList(
+            xx
+    )
 
     @FXObservable ObservableList<Person> data = FXCollections.observableArrayList(
             a, b, c, d, e
     )
 
-    @FXObservable def f = new MonthlyExpense("Rent", "1500")
+    @FXObservable def f = h.me
+    @FXObservable def h = new MonthlyExpenseBD(MonthlyExpenseBD.newME("Rent", "1500"))
     @FXObservable ObservableList<MonthlyExpense> data2 = FXCollections.observableArrayList(
             f, f, f, f, f
     )
@@ -61,7 +72,50 @@ class WealthProphetModel {
             varsG_str,  varsG_str,  varsG_str,  varsG_str
    )
 
+
 }
+
+@FXObservable
+class Calc{
+    /*static getReal(nom, infl){
+        if(nom.getClass()==ArrayList.class){
+            nom.eachWithIndex { nomi, i ->
+                nom[i] = (nomi+1).divide(infl +1, 2, RoundingMode.HALF_EVEN) - 1
+            }
+            return nom
+        }
+        else{
+            return (nom+1).divide(infl +1, 2, RoundingMode.HALF_EVEN) - 1
+        }
+    }*/
+    static getReal(ArrayList rates, String rv){
+        return rv.toBigDecimal() - rates[0].value.toBigDecimal()
+
+    }
+
+    static collectRates(Map rates){
+        def dummy = []
+        rates.each{ k, v ->
+            dummy.add(new RatesStr(k, v))
+        }
+        return dummy
+
+    }
+}
+
+@FXBindable
+class RatesStr{
+
+    String type
+    String value
+
+    public RatesStr(String typeIN, String valueIN){
+        this.type = typeIN
+        this.value = valueIN
+    }
+
+}
+
 
 @FXBindable
 class MonthlyExpense{
@@ -72,6 +126,28 @@ class MonthlyExpense{
     public MonthlyExpense(String typeIN, String valueIN){
         this.type = typeIN
         this.value = valueIN
+    }
+
+}
+
+@FXBindable
+class MonthlyExpenseBD{
+
+    String type
+    BigDecimal value
+    MonthlyExpense me
+
+    public MonthlyExpenseBD(MonthlyExpense meIN){
+        this.type = meIN.type
+        this.value = meIN.value.toBigDecimal()
+        this.me = meIN
+    }
+
+    static def newME(String typeIN, String valueIN){
+        def x
+        x = new MonthlyExpense(typeIN, valueIN)
+        return x
+
     }
 
 }
@@ -91,118 +167,26 @@ class YearlyIncome{
 }
 
 @FXBindable
-class Infl{
+class YearlyIncomeBD{
 
     String type
-    String value
+    BigDecimal value
+    YearlyIncome yi
 
-    public YearlyIncome(String typeIN, String valueIN){
-        this.type = typeIN
-        this.value = valueIN
+    public YearlyIncomeBD(YearlyIncome yiIN){
+        this.type = yiIN.type
+        this.value = yiIN.value.toBigDecimal()
+        this.yi = yiIN
+    }
+
+    static def newYI(String typeIN, String valueIN){
+        def x
+        x = new YearlyIncome(typeIN, valueIN)
+        return x
+
     }
 
 }
-@FXBindable
-class I{
-
-    String type
-    String value
-
-    public YearlyIncome(String typeIN, String valueIN){
-        this.type = typeIN
-        this.value = valueIN
-    }
-
-}
-
-@FXBindable
-class ILoC{
-
-    String type
-    String value
-
-    public YearlyIncome(String typeIN, String valueIN){
-        this.type = typeIN
-        this.value = valueIN
-    }
-
-}
-@FXBindable
-class ILoan{
-
-    String type
-    String value
-
-    public YearlyIncome(String typeIN, String valueIN){
-        this.type = typeIN
-        this.value = valueIN
-    }
-
-}
-@FXBindable
-class IStLoan{
-
-    String type
-    String value
-
-    public YearlyIncome(String typeIN, String valueIN){
-        this.type = typeIN
-        this.value = valueIN
-    }
-
-}
-@FXBindable
-class ICarLoan{
-
-    String type
-    String value
-
-    public YearlyIncome(String typeIN, String valueIN){
-        this.type = typeIN
-        this.value = valueIN
-    }
-
-}
-
-@FXBindable
-class Icc{
-
-    String type
-    String value
-
-    public YearlyIncome(String typeIN, String valueIN){
-        this.type = typeIN
-        this.value = valueIN
-    }
-
-}
-
-@FXBindable
-class RBond{
-
-    String type
-    String value
-
-    public YearlyIncome(String typeIN, String valueIN){
-        this.type = typeIN
-        this.value = valueIN
-    }
-
-}
-
-@FXBindable
-class RStock{
-
-    String type
-    String value
-
-    public YearlyIncome(String typeIN, String valueIN){
-        this.type = typeIN
-        this.value = valueIN
-    }
-
-}
-
 
 
 // set the global variables

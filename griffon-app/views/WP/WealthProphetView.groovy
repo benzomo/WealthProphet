@@ -29,8 +29,15 @@ class WealthProphetView {
     @MVCMember @Nonnull
     WealthProphetModel model
 
+    def txtinc
+    def valinc
+    @FXBindable def myscenes = []
+    def myapp
+    @FXBindable def mystage
+    def rates
+
     void initUI() {
-        builder.application(title: application.configuration['application.title'], sizeToScene: true, centerOnScreen: true, name: 'mainWindow') {
+        myapp = builder.application(title: application.configuration['application.title'], sizeToScene: true, centerOnScreen: true, name: 'mainWindow') {
 
             scene(id: 'sc3', fill: "#FFCCE5") {
 
@@ -88,34 +95,34 @@ class WealthProphetView {
                                                 anchorPane(minHeight: 0.0, minWidth: 0.0, prefHeight: 190.0, prefWidth: 90.0) {
 
                                                     vbox(layoutX: 31.6, layoutY: 10.6, prefHeight: 152.0, prefWidth: 200.0, bottomAnchor: 0.0, leftAnchor: 0.0, rightAnchor: 0.0, topAnchor: 0.0) {
-                                                        yInc = tableView(layoutX: 31.6, layoutY: 10.6, prefHeight: 180.0, prefWidth: 200.0, bottomAnchor: 0.0, leftAnchor: 0.0, rightAnchor: 0.0, topAnchor: 0.0) {
-                                                            tcTxtInc = tableColumn(minWidth: 0.0, prefWidth: 64.00000154972076, text: "Description")
+                                                        yInc = tableView(layoutX: 31.6, layoutY: 10.6, prefHeight: 125.0, prefWidth: 200.0, bottomAnchor: 0.0, leftAnchor: 0.0, rightAnchor: 0.0, topAnchor: 0.0, editable: true) {
+                                                            tcTxtInc = tableColumn(minWidth: 0.0, prefWidth: 125.0, text: "Description")
                                                             tcTxtInc.setCellValueFactory(
                                                                     new PropertyValueFactory<YearlyIncome, String>("type"))
-                                                            tcValInc = tableColumn(prefWidth: 88.99999237060547, text: "Yearly Income (\$)")
+                                                            tcValInc = tableColumn(prefWidth: 150.0, text: "Yearly Income (\$)")
+                                                            tcValInc.setCellFactory(TextFieldTableCell.forTableColumn())
                                                             tcValInc.setCellValueFactory(
                                                                     new PropertyValueFactory<YearlyIncome, String>("value"))
+                                                            tcValInc.setOnEditCommit(
+                                                                    new EventHandler<CellEditEvent<YearlyIncome, String>>() {
+                                                                        @Override
+                                                                        public void handle(CellEditEvent<YearlyIncome, String> t) {
+                                                                            ((YearlyIncome) t.getTableView().getItems().get(
+                                                                                    t.getTablePosition().getRow())
+                                                                            ).value = t.getNewValue()
+                                                                        }
+                                                                    })
                                                         }
                                                         yInc.setItems(model.dataYinc)
 
                                                         label(text: "Enter Description")
-                                                        def txtinc = textField()
+                                                        this.txtinc = textField()
                                                         txtinc.setPromptText("ex. 'Rental Income'")
                                                         label(text: "Enter Value")
-                                                        def valinc = textField()
+                                                        this.valinc = textField()
                                                         valinc.setPromptText("ex. '18000'  (1500*12)")
-
-                                                        butADDinc = button(text: "ADD", prefWidth: 200.0).setOnAction(new EventHandler<ActionEvent>() {
-                                                            @Override
-                                                            public void handle(ActionEvent e) {
-                                                                model.dataYinc.add(new YearlyIncome(txtinc.getText(), valinc.getText()))
-                                                                txtinc.clear()
-                                                                valinc.clear()
-                                                            }
-                                                        })
-
+                                                        butADDinc = button(text: "ADD", prefWidth: 200.0, addIncomeAction)
                                                     }
-
                                                 }
 
 
@@ -215,12 +222,13 @@ class WealthProphetView {
 
 
                         }
-                        scrollPane( prefHeight: -1.0,  prefWidth: -1.0){
+                        anchorPane( prefHeight: -1.0,  prefWidth: -1.0){
 
-                            anchorPane( id:'Content',  minHeight: -1.0, minWidth: -1.0, prefHeight: 545.0, prefWidth: 561.0){
-                                label(alignment: 'CENTER', layoutX: 14.0, layoutY: 14.0, style: "&#10;", text: "View", textAlignment: 'CENTER', wrapText: false )
-                                hbox(layoutX: 2.0, layoutY: 2.0, prefHeight: 55.0, prefWidth: 555.0)
+                            vbox(alignment: 'BOTTOM_LEFT', layoutX:2.0, layoutY: 524.0, prefHeight: 27.0, prefWidth=444.0, bottomAnchor: 0.0, leftAnchor: 2.0, rightAnchor: 0.0, topAnchor: 524.0){
+                                button(prefHeight: 25.0, prefWidth: 439.0, text: "Switch It!!!!!!!!!")
+
                             }
+
                         }
 
                     }
@@ -253,7 +261,7 @@ class WealthProphetView {
                 label(id: 'clickLabel', row: 0, column: 0,
                         text: bind(model.clickCountProperty()))
                 button(row: 1, column: 0, prefWidth: 200,
-                        id: 'clickActionTarget', clickAction)
+                        id: 'clickActionTarget', switchScAction)
 
                 vbox (row: 2, column: 0) {
                     label(id: 'clickLabel1', text: bind(model.clickCountProperty()))
@@ -263,7 +271,7 @@ class WealthProphetView {
                         button(id: 'clickActionTarget2', text: "fasfasf")
 
                         textField(id: 'clickLabel2', text: "fdsgdsg"){
-                            println('5654645')
+                            //println(Calc.getReal(model.xx, model.xx[3].value))
                         }
 
                     }
@@ -342,6 +350,7 @@ class WealthProphetView {
                     }
                     zz.setItems(model.data2)
 
+
                     vbox(prefWidth: 175.0) {
                         hbox(prefHeight: 225.0) {
                             l1 = listView(editable: true, prefWidth: 125)
@@ -378,18 +387,59 @@ class WealthProphetView {
                 }
             }
 
-            scene(){
+            s11 = scene(){
 
                 pane(masterPane)
 
             }
+            s22 = scene(){
 
-            st = stage(title: 'GroovyFX Hello World', visible: true)
-            st.setScene(sc3)
+                pane(){
+
+                    vbox(0) {
+                        this.rates = tableView(editable: true) {
+                            tcTxt = tableColumn(text: "Description")
+                            tcTxt.setCellValueFactory(
+                                    new PropertyValueFactory<RatesStr, String>("type"))
+                            tcVal = tableColumn(text: "Nominal Rate ")
+                            tcVal.setCellFactory(TextFieldTableCell.forTableColumn())
+                            tcVal.setCellValueFactory(
+                                    new PropertyValueFactory<RatesStr, String>("value"))
+                            tcVal.setOnEditCommit(
+                                    new EventHandler<CellEditEvent<RatesStr, String>>() {
+                                        @Override
+                                        public void handle(CellEditEvent<RatesStr, String> t) {
+                                            ((RatesStr) t.getTableView().getItems().get(
+                                                    t.getTablePosition().getRow())
+                                            ).value = t.getNewValue()
+                                        }
+                                    })
+                        }
+                        this.rates.setItems(model.dataRates)
+
+                    }
+
+                }
+
+            }
+            s33 = scene(){
+
+                pane()
+
+            }
+
+
+            this.myscenes = [sc1, sc3, s22, s33, s11 ]
+
+
+            this.mystage = stage(title: 'GroovyFX Hello World', visible: true)
+            this.mystage.setScene(myscenes[model.currScene])
+
 
             //st1.hide()
 
         }
+        myapp.setScene(myscenes[4])
     }
 
 }
