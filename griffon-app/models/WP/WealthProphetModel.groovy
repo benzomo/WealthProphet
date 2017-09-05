@@ -80,7 +80,7 @@ class WealthProphetModel {
     @FXObservable ObservableList<MonthlyExpense> dataMEbasic = FXCollections.observableArrayList(
             new MonthlyExpense("St Loan Payments", "250"),
             new MonthlyExpense("LoC Payments", "350"),
-            new MonthlyExpense("Phone/interent/tv", "150"),
+            new MonthlyExpense("Phone/internet/tv", "150"),
             new MonthlyExpense("gym/excercise", "100"),
             new MonthlyExpense("Pet Care", "30"),
     )
@@ -108,6 +108,18 @@ class WealthProphetModel {
                                         dataMEother[0..dataMEother.size()-1].value*.toBigDecimal().sum(),
 
             ),
+    )
+
+
+    @FXObservable ObservableList<Asset> dataAss = FXCollections.observableArrayList(
+            new Asset("Stocks", "20000"),
+            new Asset("Bonds", "0"),
+            new Asset("Car", "6000"),
+
+    )
+    @FXObservable ObservableList<Liability> dataLiab = FXCollections.observableArrayList(
+            new Liability("Line of Credit", "26000"),
+            new Liability("Student Loans", "15000"),
     )
 
 
@@ -184,7 +196,6 @@ class MonthlyExpense{
 }
 
 
-
 @FXBindable
 class YearlyIncome{
 
@@ -197,6 +208,39 @@ class YearlyIncome{
     }
 
 }
+
+@FXBindable
+class Asset{
+
+    String type
+    String value
+
+    public Asset(String typeIN, String valueIN){
+        this.type = typeIN
+        this.value = valueIN
+    }
+
+}
+
+class Liability{
+
+    String type
+    String value
+
+    public Liability(String typeIN, String valueIN){
+        this.type = typeIN
+        this.value = valueIN
+    }
+
+}
+
+
+
+
+
+
+
+
 
 
 

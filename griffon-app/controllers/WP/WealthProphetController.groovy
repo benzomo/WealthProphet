@@ -58,6 +58,23 @@ class WealthProphetController {
         view.valOexp.clear()
     }
 
+    @ControllerAction
+    @Threading(Threading.Policy.INSIDE_UITHREAD_ASYNC)
+    void addAss() {
+        model.dataAss.add(new Asset(view.txtAss.getText(), view.valAss.getText()))
+        view.txtAss.clear()
+        view.valAss.clear()
+    }
+
+    @ControllerAction
+    @Threading(Threading.Policy.INSIDE_UITHREAD_ASYNC)
+    void addLiab() {
+        model.dataLiab.add(new Liability(view.txtLiab.getText(), view.valLiab.getText()))
+        view.txtLiab.clear()
+        view.valLiab.clear()
+    }
+
+
 
     @ControllerAction
     @Threading(Threading.Policy.INSIDE_UITHREAD_ASYNC)

@@ -33,6 +33,7 @@ class WealthProphetView {
     @MVCMember @Nonnull
     WealthProphetModel model
 
+
     def txtinc
     def valinc
     def txtSexp
@@ -41,8 +42,10 @@ class WealthProphetView {
     def valBexp
     def txtOexp
     def valOexp
-
-
+    def txtAss
+    def valAss
+    def txtLiab
+    def valLiab
 
 
     @FXBindable def myscenes = []
@@ -100,12 +103,11 @@ class WealthProphetView {
                             label(alignment: 'CENTER', layoutX: 14.0, layoutY: 14.0, minWidth: 60.0, prefWidth: -1.0, style: "&#10;", text:"Master", textAlignment:'CENTER', wrapText: false)
 
                             splitPane( dividerPositions: 0.5, layoutX: 4.0, layoutY: 43.0, orientation: 'VERTICAL', prefHeight: 504.0, prefWidth: 319.0, bottomAnchor: 0.0, leftAnchor: 0.0,  rightAnchor: 0.0, topAnchor:0.0) {
-
                                 splitPane( dividerPositions: 0.4707692307692308, layoutY: 37.0, prefHeight: 255.0, prefWidth: 327.0){
                                     anchorPane( minHeight: 0.0 ,minWidth: 0.0 ,prefHeight: 290.0, prefWidth: 463.0) {
                                         hbox(layoutX: 6.0, layoutY: 1.0, prefHeight: 25.0, prefWidth: 150.0)
                                         accordion(layoutY: 25.0, prefHeight: 253.0, prefWidth: 150.0, bottomAnchor: 0.0, leftAnchor: 0.0, rightAnchor: 0.0, topAnchor: 0.0) {
-                                            titledPane(animated: false, text: "Yearly Income") {
+                                            titledPane(animated: true, text: "Yearly Income") {
                                                 anchorPane(minHeight: 0.0, minWidth: 0.0, prefHeight: 190.0, prefWidth: 90.0) {
 
                                                     vbox(layoutX: 31.6, layoutY: 10.6, prefHeight: 152.0, prefWidth: 200.0, bottomAnchor: 0.0, leftAnchor: 0.0, rightAnchor: 0.0, topAnchor: 0.0) {
@@ -141,7 +143,7 @@ class WealthProphetView {
 
 
                                             }
-                                            titledPane(animated: false, text: "Capital Income") {
+                                            titledPane(animated: true, text: "Capital Income") {
                                                 anchorPane(minHeight: 0.0, minWidth: 0.0, prefHeight: 180.0, prefWidth: 200.0) {
                                                     tableView(prefHeight: 177.0, prefWidth: 148.0, bottomAnchor: 0.0, leftAnchor: 0.0, rightAnchor: 0.0, topAnchor: 0.0) {
                                                         tableColumn(minWidth: 0.0, prefWidth: 65.00000154972076, text: "C1")
@@ -158,7 +160,7 @@ class WealthProphetView {
 
                                         hbox(prefHeight: 25.0, prefWidth: 169.0)
                                         accordion(layoutY: 24.0, prefHeight: 253.0, prefWidth: 169.0, bottomAnchor: 0.0, leftAnchor: 0.0, rightAnchor: 0.0, topAnchor: 0.0) {
-                                            titledPane(animated: false, text: "Survival Expenses") {
+                                            titledPane(animated: true, text: "Survival Expenses") {
                                                 anchorPane(minHeight: 0.0, minWidth: 0.0, prefHeight: 190.0, prefWidth: 90.0) {
                                                     vbox(layoutX: 31.6, layoutY: 10.6, prefHeight: 152.0, prefWidth: 200.0, bottomAnchor: 0.0, leftAnchor: 0.0, rightAnchor: 0.0, topAnchor: 0.0){
                                                         exp = tableView(editable: true) {
@@ -198,7 +200,7 @@ class WealthProphetView {
                                                 }
 
                                             }
-                                            titledPane(animated: false, text: "Basic Expenses") {
+                                            titledPane(animated: true, text: "Basic Expenses") {
                                                 anchorPane(minHeight: 0.0, minWidth: 0.0, prefHeight: 180.0, prefWidth: 200.0) {
                                                     vbox(layoutX: 31.6, layoutY: 10.6, prefHeight: 152.0, prefWidth: 200.0, bottomAnchor: 0.0, leftAnchor: 0.0, rightAnchor: 0.0, topAnchor: 0.0){
                                                         exp = tableView(editable: true) {
@@ -238,7 +240,7 @@ class WealthProphetView {
                                                 }
 
                                             }
-                                            titledPane(animated: false, text: "Other Expenses") {
+                                            titledPane(animated: true, text: "Other Expenses") {
                                                 anchorPane(minHeight: 0.0, minWidth: 0.0, prefHeight: 180.0, prefWidth: 200.0) {
                                                     vbox(layoutX: 31.6, layoutY: 10.6, prefHeight: 152.0, prefWidth: 200.0, bottomAnchor: 0.0, leftAnchor: 0.0, rightAnchor: 0.0, topAnchor: 0.0){
                                                         exp = tableView(editable: true) {
@@ -284,28 +286,94 @@ class WealthProphetView {
                                 anchorPane(minHeight: 0.0, minWidth: 0.0, prefHeight: 100.0, prefWidth: 160.0) {
                                     tabPane(layoutX: 1.0, layoutY: 21.0, prefHeight: 228.0, prefWidth: 317.0, tabClosingPolicy: 'UNAVAILABLE', bottomAnchor: 0.0, leftAnchor: 0.0, rightAnchor: 0.0, topAnchor: 0.0) {
 
-                                        tab(text: "Untitled Tab 1") {
+                                        tab(text: "Assets/Liabilities") {
                                             anchorPane(minHeight: 0.0, minWidth: 0.0, prefHeight: 180.0, prefWidth: 200.0) {
 
                                                 splitPane(dividerPositions: 0.473015873015873, prefHeight: 219.0, prefWidth: 317.0, bottomAnchor: 0.0, leftAnchor: 0.0, rightAnchor: 0.0, topAnchor: 0.0) {
                                                     anchorPane(minHeight: 0.0, minWidth: 0.0, prefHeight: 160.0, prefWidth: 100.0) {
-                                                        tableView(layoutX: -27.0, layoutY: 9.0, prefHeight: 217.0, prefWidth: 146.0, bottomAnchor: 0.0, leftAnchor: 0.0, rightAnchor: 0.0, topAnchor: 0.0) {
-                                                            tableColumn(prefWidth: 75.0, text: "C1")
-                                                            tableColumn(prefWidth: 75.0, text: "C2")
+                                                        vbox(layoutX: 31.6, layoutY: 10.6, prefHeight: 152.0, prefWidth: 200.0, bottomAnchor: 0.0, leftAnchor: 0.0, rightAnchor: 0.0, topAnchor: 0.0){
+                                                            text(text: 'Assets', font: '12pt sanserif') {
+                                                                fill linearGradient(endX: 0, stops: [PALEGREEN, SEAGREEN])
+                                                            }
+                                                            ass = tableView(editable: true) {
+                                                                tableColumn(id: 'typeCol')
+                                                                typeCol.setMinWidth(100);
+                                                                typeCol.setCellValueFactory(
+                                                                        new PropertyValueFactory<Asset, String>("type"))
+
+
+                                                                tableColumn(id: 'valueCol')
+                                                                valueCol.setMinWidth(100)
+                                                                valueCol.setCellFactory(TextFieldTableCell.forTableColumn())
+                                                                valueCol.setCellValueFactory(
+                                                                        new PropertyValueFactory<Asset, String>("value"))
+                                                                valueCol.setOnEditCommit(
+                                                                        new EventHandler<CellEditEvent<Asset, String>>() {
+                                                                            @Override
+                                                                            public void handle(CellEditEvent<Asset, String> t) {
+                                                                                ((Asset) t.getTableView().getItems().get(
+                                                                                        t.getTablePosition().getRow())
+                                                                                ).value = t.getNewValue()
+                                                                            }
+                                                                        })
+                                                            }
+                                                            ass.setItems(model.dataAss)
+
+                                                            label(text: "Enter Description")
+                                                            this.txtAss = textField()
+                                                            txtAss.setPromptText("ex. 'new car'")
+                                                            label(text: "Enter Value")
+                                                            this.valAss = textField()
+                                                            valAss.setPromptText("ex. '40000")
+                                                            butADD = button(text: "ADD", prefWidth: 200.0, addAssAction)
+
                                                         }
                                                     }
                                                     anchorPane(minHeight: 0.0, minWidth: 0.0, prefHeight: 160.0, prefWidth: 100.0) {
 
-                                                        tableView(layoutX: -18.0, layoutY: 9.0, prefHeight: 217.0, prefWidth: 163.0, bottomAnchor: 0.0, leftAnchor: 0.0, rightAnchor: 0.0, topAnchor: 0.0) {
-                                                            tableColumn(prefWidth: 75.0, text: "C1")
-                                                            tableColumn(prefWidth: 75.0, text: "C2")
+                                                        vbox(layoutX: 31.6, layoutY: 10.6, prefHeight: 152.0, prefWidth: 200.0, bottomAnchor: 0.0, leftAnchor: 0.0, rightAnchor: 0.0, topAnchor: 0.0){
+                                                            text(text: 'Liabilities', font: '12pt sanserif') {
+                                                                fill linearGradient(endX: 0, stops: [RED, PURPLE])
+                                                            }
+                                                            liab = tableView(editable: true) {
+                                                                tableColumn(id: 'typeCol')
+                                                                typeCol.setMinWidth(100);
+                                                                typeCol.setCellValueFactory(
+                                                                        new PropertyValueFactory<Liability, String>("type"))
+
+
+                                                                tableColumn(id: 'valueCol')
+                                                                valueCol.setMinWidth(100)
+                                                                valueCol.setCellFactory(TextFieldTableCell.forTableColumn())
+                                                                valueCol.setCellValueFactory(
+                                                                        new PropertyValueFactory<Liability, String>("value"))
+                                                                valueCol.setOnEditCommit(
+                                                                        new EventHandler<CellEditEvent<Liability, String>>() {
+                                                                            @Override
+                                                                            public void handle(CellEditEvent<Liability, String> t) {
+                                                                                ((Liability) t.getTableView().getItems().get(
+                                                                                        t.getTablePosition().getRow())
+                                                                                ).value = t.getNewValue()
+                                                                            }
+                                                                        })
+                                                            }
+                                                            liab.setItems(model.dataLiab)
+
+                                                            label(text: "Enter Description")
+                                                            this.txtLiab = textField()
+                                                            txtLiab.setPromptText("ex. 'new Car Loan'")
+                                                            label(text: "Enter Value")
+                                                            this.valLiab = textField()
+                                                            valLiab.setPromptText("ex. '10000")
+                                                            butADD = button(text: "ADD", prefWidth: 200.0, addLiabAction)
+
                                                         }
                                                     }
 
                                                 }
                                             }
                                         }
-                                        tab(text = "Untitled Tab 2") {
+                                        tab(text = "Real-Estate") {
                                             anchorPane(minHeight: 0.0, minWidth: 0.0, prefHeight: 180.0, prefWidth: 200.0) {
                                                 tableView(layoutX: 2.0, prefHeight: 200.0, prefWidth: 157.0) {
                                                     tableColumn(prefWidth: 75.0, text: "C1")
@@ -326,7 +394,9 @@ class WealthProphetView {
 
                         }
                         anchorPane( prefHeight: -1.0,  prefWidth: -1.0){
+                            effect dropShadow(color: DODGERBLUE, radius: 25, spread: 0.25)
                             hbox{
+
                                 vbox{
                                     pieChart(data: model.budgetPi, title: "Budget Pie Chart")
                                     label(text: "Survival costs = " + model.budgetPi[0].pieValue.toString() + "  (" +  (model.budgetPi[0].pieValue.toBigDecimal().divide(model.budgetPi.pieValue.sum(), 1, RoundingMode.HALF_EVEN)*100).toString() + "%)",
