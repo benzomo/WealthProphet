@@ -9,7 +9,9 @@ import griffon.transform.PropertyListener
 import javafx.collections.FXCollections
 import griffon.transform.FXObservable
 import griffon.metadata.ArtifactProviderFor
+import javafx.scene.chart.BarChart
 import javafx.scene.chart.PieChart
+import javafx.scene.chart.XYChart
 
 import java.math.RoundingMode
 import javafx.beans.property.SimpleStringProperty
@@ -43,6 +45,7 @@ class WealthProphetModel {
 
 
     @FXObservable currScene = 0
+    @FXObservable addedYear = 0
 
 
     Map rates = [infl: "0.02", i: "0.035",
@@ -95,13 +98,18 @@ class WealthProphetModel {
             new YearlyIncome("Job 2", "0"),
             new YearlyIncome("Job 3", "0"),
             new YearlyIncome("Rental Income", "0"),
-
     )
+
+    @FXObservable ObservableList<YearlyIncome> dataFinInc = FXCollections.observableArrayList(
+            new YearlyIncome("Stock Income", ((dataAss[0].value.toBigDecimal() + dataAss[0].value.toBigDecimal()/(dataAss[0].value.toBigDecimal()+dataAss[1].value.toBigDecimal())*budgetPi[3].pieValue*12.0/2.0)*Calc.getReal(xx, xx[7].value)).toString()),
+            new YearlyIncome("Bond Income", ((dataAss[1].value.toBigDecimal() + dataAss[1].value.toBigDecimal()/(dataAss[0].value.toBigDecimal()+dataAss[1].value.toBigDecimal())*budgetPi[3].pieValue*12.0/2.0)*Calc.getReal(xx, xx[7].value)).toString()),
+    )
+
     @FXObservable ObservableList<PieChart.Data> budgetPi = FXCollections.observableArrayList(
 
-            new PieChart.Data("Survival", dataMEsurv[0..dataMEsurv.size()-1].value*.toBigDecimal().sum()),
-            new PieChart.Data("Basic", dataMEbasic[0..dataMEbasic.size()-1].value*.toBigDecimal().sum()),
-            new PieChart.Data("Other", dataMEother[0..dataMEother.size()-1].value*.toBigDecimal().sum()),
+            new PieChart.Data("Survival", dataMEsurv.value*.toBigDecimal().sum()),
+            new PieChart.Data("Basic", dataMEbasic.value*.toBigDecimal().sum()), //dont need to specify index, can do either way
+            new PieChart.Data("Other", dataMEother.value*.toBigDecimal().sum()),
             new PieChart.Data("Savings", dataYinc[0..dataYinc.size()-1].value*.toBigDecimal().sum()/12 -
                                         dataMEsurv[0..dataMEsurv.size()-1].value*.toBigDecimal().sum() -
                                         dataMEbasic[0..dataMEbasic.size()-1].value*.toBigDecimal().sum() -
@@ -109,6 +117,24 @@ class WealthProphetModel {
 
             ),
     )
+    @FXObservable ObservableList<XYChart.Series> nwBar = FXCollections.observableArrayList(
+            new XYChart.Series(nwAss),
+            new XYChart.Series(nwLiab),
+            new XYChart.Series(nwNW),
+
+    )
+
+    @FXObservable ObservableList<XYChart.Data> nwAss = FXCollections.observableArrayList(
+            new XYChart.Data<String, BigDecimal>((Calendar.getInstance().get(Calendar.YEAR)+addedYear).toString(), dataAss.value*.toBigDecimal().sum()),
+    )
+    @FXObservable ObservableList<XYChart.Data> nwLiab = FXCollections.observableArrayList(
+            new XYChart.Data<String, BigDecimal>((Calendar.getInstance().get(Calendar.YEAR)+addedYear).toString(), dataLiab.value*.toBigDecimal().sum()),
+    )
+    @FXObservable ObservableList<XYChart.Data> nwNW = FXCollections.observableArrayList(
+            new XYChart.Data<String, BigDecimal>((Calendar.getInstance().get(Calendar.YEAR)+addedYear).toString(), dataAss.value*.toBigDecimal().sum() - dataLiab.value*.toBigDecimal().sum()),
+    )
+
+
 
 
     @FXObservable ObservableList<Asset> dataAss = FXCollections.observableArrayList(
@@ -140,6 +166,18 @@ class WealthProphetModel {
 
 }
 
+@FXBindable
+class YearWealth{
+    BigDecimal value
+
+    public YearWealth(String typeIN, Double valueIN){
+        this.type = typeIN
+        this.value = valueIN
+    }
+
+}
+
+
 @FXObservable
 class Calc{
     /*static getReal(nom, infl){
@@ -154,7 +192,7 @@ class Calc{
         }
     }*/
     static getReal(ArrayList rates, String rv){
-        return rv.toBigDecimal() - rates[0].value.toBigDecimal()
+        return (rv.toBigDecimal() +1)/ (rates[0].value.toBigDecimal()+1) - 1
 
     }
 

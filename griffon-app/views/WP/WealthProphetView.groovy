@@ -47,7 +47,8 @@ class WealthProphetView {
     def txtLiab
     def valLiab
 
-
+    @FXBindable def bar
+    @FXBindable def pi1, pi1L1, pi1L2, pi1L3, pi1L4
     @FXBindable def myscenes = []
     def myapp
     @FXBindable def mystage
@@ -145,9 +146,19 @@ class WealthProphetView {
                                             }
                                             titledPane(animated: true, text: "Capital Income") {
                                                 anchorPane(minHeight: 0.0, minWidth: 0.0, prefHeight: 180.0, prefWidth: 200.0) {
-                                                    tableView(prefHeight: 177.0, prefWidth: 148.0, bottomAnchor: 0.0, leftAnchor: 0.0, rightAnchor: 0.0, topAnchor: 0.0) {
-                                                        tableColumn(minWidth: 0.0, prefWidth: 65.00000154972076, text: "C1")
-                                                        tableColumn(prefWidth: 86.99999237060547, text: "C2")
+                                                    vbox(layoutX: 31.6, layoutY: 10.6, prefHeight: 152.0, prefWidth: 200.0, bottomAnchor: 0.0, leftAnchor: 0.0, rightAnchor: 0.0, topAnchor: 0.0) {
+                                                        yInc = tableView(layoutX: 31.6, layoutY: 10.6, prefHeight: 125.0, prefWidth: 200.0, bottomAnchor: 0.0, leftAnchor: 0.0, rightAnchor: 0.0, topAnchor: 0.0, editable: true) {
+                                                            tcTxtInc = tableColumn(minWidth: 0.0, prefWidth: 125.0, text: "Description")
+                                                            tcTxtInc.setCellValueFactory(
+                                                                    new PropertyValueFactory<YearlyIncome, String>("type"))
+                                                            tcValInc = tableColumn(prefWidth: 150.0, text: "Yearly Income (\$)")
+                                                            tcValInc.setCellFactory(TextFieldTableCell.forTableColumn())
+                                                            tcValInc.setCellValueFactory(
+                                                                    new PropertyValueFactory<YearlyIncome, String>("value"))
+
+                                                        }
+                                                        yInc.setItems(model.dataFinInc)
+
                                                     }
 
                                                 }
@@ -394,24 +405,46 @@ class WealthProphetView {
 
                         }
                         anchorPane( prefHeight: -1.0,  prefWidth: -1.0){
-                            effect dropShadow(color: DODGERBLUE, radius: 25, spread: 0.25)
+                            effect dropShadow(color: CYAN, radius: 15, spread: 0.075)
                             hbox{
 
                                 vbox{
-                                    pieChart(data: model.budgetPi, title: "Budget Pie Chart")
-                                    label(text: "Survival costs = " + model.budgetPi[0].pieValue.toString() + "  (" +  (model.budgetPi[0].pieValue.toBigDecimal().divide(model.budgetPi.pieValue.sum(), 1, RoundingMode.HALF_EVEN)*100).toString() + "%)",
+                                    pi1 = pieChart(data: model.budgetPi, title: "Budget Pie Chart")
+                                    pi1L1 = label(text: "Survival costs = " + model.budgetPi[0].pieValue.toString() + "  (" +  (model.budgetPi[0].pieValue.toBigDecimal().divide(model.budgetPi.pieValue.sum(), 1, RoundingMode.HALF_EVEN)*100).toString() + "%)",
                                             font: '14pt verdana')
-                                    label(text: "Basic costs = " + model.budgetPi[1].pieValue.toString() + "  (" +  (model.budgetPi[1].pieValue.toBigDecimal().divide(model.budgetPi.pieValue.sum(), 1, RoundingMode.HALF_EVEN)*100).toString() + "%)",
+                                    pi1L2 = label(text: "Basic costs = " + model.budgetPi[1].pieValue.toString() + "  (" +  (model.budgetPi[1].pieValue.toBigDecimal().divide(model.budgetPi.pieValue.sum(), 1, RoundingMode.HALF_EVEN)*100).toString() + "%)",
                                             font: '14pt verdana')
-                                    label(text: "Other costs = " + model.budgetPi[2].pieValue.toString() + "  (" +  (model.budgetPi[2].pieValue.toBigDecimal().divide(model.budgetPi.pieValue.sum(), 1, RoundingMode.HALF_EVEN)*100).toString() + "%)",
+                                    pi1L3 = label(text: "Other costs = " + model.budgetPi[2].pieValue.toString() + "  (" +  (model.budgetPi[2].pieValue.toBigDecimal().divide(model.budgetPi.pieValue.sum(), 1, RoundingMode.HALF_EVEN)*100).toString() + "%)",
                                             font: '14pt verdana')
-                                    label(text: "% of Income Saved = (" +  (model.budgetPi[3].pieValue.toBigDecimal().divide(model.budgetPi.pieValue.sum(), 1, RoundingMode.HALF_EVEN)*100).toString() + "%)",
+                                    pi1L4 = label(text: "% of Income Saved = (" +  (model.budgetPi[3].pieValue.toBigDecimal().divide(model.budgetPi.pieValue.sum(), 1, RoundingMode.HALF_EVEN)*100).toString() + "%)",
                                             font: '14pt verdana')
+                                }
+                                vbox{
+                                    model.nwBar[0].name = "Assets"
+                                    model.nwBar[1].name = "Debts"
+                                    model.nwBar[2].name = "Net Wealth"
+                                    bar = barChart(data: model.nwBar, title: "NW Bar Chart")
+
+
+                                    button(prefHeight: 55.0, prefWidth: 350.0, text: "NEXT YEAR", nextYearAction)
                                 }
                             }
 
                             vbox(alignment: 'BOTTOM_LEFT', layoutX:2.0, layoutY: 524.0, prefHeight: 27.0, prefWidth=444.0, bottomAnchor: 0.0, leftAnchor: 2.0, rightAnchor: 0.0, topAnchor: 524.0){
-                                button(prefHeight: 25.0, prefWidth: 439.0, text: "Switch It!!!!!!!!!")
+                                hbox(padding: 60) {
+                                    text(text: '                FOR YEAR:       ', font: '32pt sanserif') {
+                                        fill linearGradient(endX: 0, stops: [PALEGREEN, SEAGREEN])
+                                    }
+                                    text(text: (Calendar.getInstance().get(Calendar.YEAR)).toString(), font: '46pt sanserif') {
+                                        fill linearGradient(endX: 0, stops: [CYAN, DODGERBLUE])
+                                        effect dropShadow(color: BLACK, radius: 25, spread: 0.25)
+                                    }
+                                }
+
+                            }
+
+                            vbox(alignment: 'BOTTOM_LEFT', layoutX:2.0, layoutY: 524.0, prefHeight: 27.0, prefWidth=444.0, bottomAnchor: 0.0, leftAnchor: 2.0, rightAnchor: 0.0, topAnchor: 524.0){
+                                button(prefHeight: 25.0, prefWidth: 439.0, text: "UPDATE IT!!!!!!!!!", updatePieAction)
 
                             }
 
@@ -459,6 +492,7 @@ class WealthProphetView {
                         textField(id: 'clickLabel2', text: "fdsgdsg"){
                             //println(Calc.getReal(model.xx, model.xx[3].value))
                             //println(model.budgetPi[2].pieValue)
+                            //println(model.dataFinInc[0].value)
                         }
 
                     }

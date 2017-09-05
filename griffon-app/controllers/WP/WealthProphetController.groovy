@@ -5,9 +5,13 @@ import griffon.core.controller.ControllerAction
 import griffon.inject.MVCMember
 import griffon.metadata.ArtifactProviderFor
 import griffon.transform.Threading
+import javafx.collections.FXCollections
 import javafx.event.ActionEvent
+import javafx.scene.chart.PieChart
+import javafx.scene.chart.XYChart
 
 import javax.annotation.Nonnull
+import java.math.RoundingMode
 
 
 @ArtifactProviderFor(GriffonController)
@@ -74,7 +78,64 @@ class WealthProphetController {
         view.valLiab.clear()
     }
 
+    @ControllerAction
+    @Threading(Threading.Policy.INSIDE_UITHREAD_ASYNC)
+    void updatePie() {
 
+        model.budgetPi = FXCollections.observableArrayList(
+
+                new PieChart.Data("Survival", model.dataMEsurv[0..model.dataMEsurv.size()-1].value*.toBigDecimal().sum()),
+                new PieChart.Data("Basic", model.dataMEbasic[0..model.dataMEbasic.size()-1].value*.toBigDecimal().sum()),
+                new PieChart.Data("Other", model.dataMEother[0..model.dataMEother.size()-1].value*.toBigDecimal().sum()),
+                new PieChart.Data("Savings", model.dataYinc[0..model.dataYinc.size()-1].value*.toBigDecimal().sum()/12 -
+                        model.dataMEsurv[0..model.dataMEsurv.size()-1].value*.toBigDecimal().sum() -
+                        model.dataMEbasic[0..model.dataMEbasic.size()-1].value*.toBigDecimal().sum() -
+                        model.dataMEother[0..model.dataMEother.size()-1].value*.toBigDecimal().sum(),
+
+                ),
+        )
+        view.pi1.data = model.budgetPi
+        view.pi1L1.text =  "Survival costs = " + model.budgetPi[0].pieValue.toString() + "  (" +  (model.budgetPi[0].pieValue.toBigDecimal().divide(model.budgetPi.pieValue.sum(), 1, RoundingMode.HALF_EVEN)*100).toString() + "%)"
+        view.pi1L2.text = "Basic costs = " + model.budgetPi[1].pieValue.toString() + "  (" +  (model.budgetPi[1].pieValue.toBigDecimal().divide(model.budgetPi.pieValue.sum(), 1, RoundingMode.HALF_EVEN)*100).toString() + "%)"
+
+        view.pi1L3.text = "Other costs = " + model.budgetPi[2].pieValue.toString() + "  (" +  (model.budgetPi[2].pieValue.toBigDecimal().divide(model.budgetPi.pieValue.sum(), 1, RoundingMode.HALF_EVEN)*100).toString() + "%)"
+        view.pi1L4.text = "% of Income Saved = (" +  (model.budgetPi[3].pieValue.toBigDecimal().divide(model.budgetPi.pieValue.sum(), 1, RoundingMode.HALF_EVEN)*100).toString() + "%)"
+
+    }
+
+    @ControllerAction
+    @Threading(Threading.Policy.INSIDE_UITHREAD_ASYNC)
+    void nextYear() {
+
+        model.addedYear = model.addedYear + 1
+        BigDecimal nextYearAss
+        BigDecimal nextYearLiab
+        BigDecimal nextYearNW
+
+        if(model.dataLiab[0].value.toBigDecimal() < 0.0){
+            model.dataMEbasic[0].value = "0.0"
+        }
+
+
+        if(model.dataLiab[1].value.toBigDecimal() < 0.0){
+            model.dataMEbasic[1].value = "0.0"
+        }
+
+        nextYearAss = model.nwAss[model.nwAss.size()-1].YValue + model.dataFinInc[0].value.toBigDecimal()*12 + model.budgetPi[3].pieValue*12
+
+        if(model.nwLiab[model.nwLiab.size()-1].YValue < 0.0){
+
+            nextYearLiab = model.nwLiab[model.nwLiab.size()-1].YValue
+        }
+        else{
+            nextYearLiab = model.nwLiab[model.nwLiab.size()-1].YValue + model.nwLiab[model.nwLiab.size()-1].YValue*Calc.getReal(model.xx, model.xx[2].value) - model.dataMEbasic[0].value.toBigDecimal()*12 - model.dataMEbasic[1].value.toBigDecimal()*12
+        }
+        nextYearNW = nextYearAss - nextYearLiab
+
+        model.nwAss.add(new XYChart.Data<String, BigDecimal>((Calendar.getInstance().get(Calendar.YEAR)+model.addedYear).toString(), nextYearAss))
+        model.nwLiab.add(new XYChart.Data<String, BigDecimal>((Calendar.getInstance().get(Calendar.YEAR)+model.addedYear).toString(), nextYearLiab))
+        model.nwNW.add(new XYChart.Data<String, BigDecimal>((Calendar.getInstance().get(Calendar.YEAR)+model.addedYear).toString(), nextYearNW))
+    }
 
     @ControllerAction
     @Threading(Threading.Policy.INSIDE_UITHREAD_ASYNC)
@@ -89,8 +150,6 @@ class WealthProphetController {
         }
         model.currScene = i
         view.mystage.setScene(view.myscenes[i])
-
-
 
     }
 
