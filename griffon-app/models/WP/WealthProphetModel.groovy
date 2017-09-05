@@ -9,6 +9,8 @@ import griffon.transform.PropertyListener
 import javafx.collections.FXCollections
 import griffon.transform.FXObservable
 import griffon.metadata.ArtifactProviderFor
+import javafx.scene.chart.PieChart
+
 import java.math.RoundingMode
 import javafx.beans.property.SimpleStringProperty
 import javafx.collections.ObservableList
@@ -22,6 +24,18 @@ class WealthProphetModel {
 
     @FXObservable clickCount = "0" //TESTING AREA_________________________
     //____________________________________
+
+    @FXObservable ObservableList<Person> data = FXCollections.observableArrayList(
+            new Person("0.03", "0.02", "0.01"),
+            new Person("Isabella", "Johnson", "isabella.johnson@example.com"),
+            new Person("Ethan", "Williams", "ethan.williams@example.com"),
+            new Person("Emma", "Jones", "emma.jones@example.com"),
+            new Person("Michael", "Brown", "michael.brown@example.com")
+    )
+
+
+
+
     //_____________________________________
     //_____________________________________
 
@@ -36,32 +50,66 @@ class WealthProphetModel {
                  iStLoan: "0.06", iCarLoan: "0.045",
                  icc: "0.15", rBond: "0.035", rStock: "0.06",
                  deprCar: "0.1", deprHouse: "0.01",
-                 apprHouse: "0.02"]
+                 apprHouse: "0.035"]
+    // 0 - infl
+    // 1 - i
+    // 2 - iloc
+    // 3 - istloan
+    // 4 - icarloan
+    // 5 - icc
+    // 6 - rbond
+    // 7 - rstock
+    // 8 - deprcar
+    // 9 - deprhouse
+    // 10 - apprhouse
+
 
     @FXBindable def xx = Calc.collectRates(rates)
     @FXObservable ObservableList<RatesStr> dataRates = FXCollections.observableArrayList(
             xx
     )
 
-    @FXObservable ObservableList<Person> data = FXCollections.observableArrayList(
-            a, b, c, d, e
+
+    @FXObservable ObservableList<MonthlyExpense> dataMEsurv = FXCollections.observableArrayList(
+            new MonthlyExpense("Rent", "1500"),
+            new MonthlyExpense("Groceries", "450"),
+            new MonthlyExpense("Taxes", "1200"),
+            new MonthlyExpense("Car ins/maint/gas", "250"),
     )
 
-    @FXObservable def f = h.me
-    @FXObservable def h = new MonthlyExpenseBD(MonthlyExpenseBD.newME("Rent", "1500"))
-    @FXObservable ObservableList<MonthlyExpense> data2 = FXCollections.observableArrayList(
-            f, f, f, f, f
+    @FXObservable ObservableList<MonthlyExpense> dataMEbasic = FXCollections.observableArrayList(
+            new MonthlyExpense("St Loan Payments", "250"),
+            new MonthlyExpense("LoC Payments", "350"),
+            new MonthlyExpense("Phone/interent/tv", "150"),
+            new MonthlyExpense("gym/excercise", "100"),
+            new MonthlyExpense("Pet Care", "30"),
     )
-    @FXObservable def g = new YearlyIncome("typr1", "55000")
+    @FXObservable ObservableList<MonthlyExpense> dataMEother = FXCollections.observableArrayList(
+            new MonthlyExpense("gifts", "100"),
+            new MonthlyExpense("travel", "130"),
+            new MonthlyExpense("Spending Money", "100"),
+    )
+
     @FXObservable ObservableList<YearlyIncome> dataYinc = FXCollections.observableArrayList(
-            g, g, g
+            new YearlyIncome("Job 1", "55000"),
+            new YearlyIncome("Job 2", "0"),
+            new YearlyIncome("Job 3", "0"),
+            new YearlyIncome("Rental Income", "0"),
+
+    )
+    @FXObservable ObservableList<PieChart.Data> budgetPi = FXCollections.observableArrayList(
+
+            new PieChart.Data("Survival", dataMEsurv[0..dataMEsurv.size()-1].value*.toBigDecimal().sum()),
+            new PieChart.Data("Basic", dataMEbasic[0..dataMEbasic.size()-1].value*.toBigDecimal().sum()),
+            new PieChart.Data("Other", dataMEother[0..dataMEother.size()-1].value*.toBigDecimal().sum()),
+            new PieChart.Data("Savings", dataYinc[0..dataYinc.size()-1].value*.toBigDecimal().sum()/12 -
+                                        dataMEsurv[0..dataMEsurv.size()-1].value*.toBigDecimal().sum() -
+                                        dataMEbasic[0..dataMEbasic.size()-1].value*.toBigDecimal().sum() -
+                                        dataMEother[0..dataMEother.size()-1].value*.toBigDecimal().sum(),
+
+            ),
     )
 
-    @FXObservable def a = new Person("0.03", "0.02", "0.01")
-    @FXObservable def b = new Person("Isabella", "Johnson", "isabella.johnson@example.com")
-    @FXObservable def c = new Person("Ethan", "Williams", "ethan.williams@example.com")
-    @FXObservable def d = new Person("Emma", "Jones", "emma.jones@example.com")
-    @FXObservable def e = new Person("Michael", "Brown", "michael.brown@example.com")
 
 
 
@@ -135,27 +183,6 @@ class MonthlyExpense{
 
 }
 
-@FXBindable
-class MonthlyExpenseBD{
-
-    String type
-    BigDecimal value
-    MonthlyExpense me
-
-    public MonthlyExpenseBD(MonthlyExpense meIN){
-        this.type = meIN.type
-        this.value = meIN.value.toBigDecimal()
-        this.me = meIN
-    }
-
-    static def newME(String typeIN, String valueIN){
-        def x
-        x = new MonthlyExpense(typeIN, valueIN)
-        return x
-
-    }
-
-}
 
 
 @FXBindable
@@ -171,27 +198,7 @@ class YearlyIncome{
 
 }
 
-@FXBindable
-class YearlyIncomeBD{
 
-    String type
-    BigDecimal value
-    YearlyIncome yi
-
-    public YearlyIncomeBD(YearlyIncome yiIN){
-        this.type = yiIN.type
-        this.value = yiIN.value.toBigDecimal()
-        this.yi = yiIN
-    }
-
-    static def newYI(String typeIN, String valueIN){
-        def x
-        x = new YearlyIncome(typeIN, valueIN)
-        return x
-
-    }
-
-}
 
 
 // set the global variables

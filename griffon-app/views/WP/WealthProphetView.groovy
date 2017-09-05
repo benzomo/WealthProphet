@@ -5,6 +5,7 @@ import griffon.inject.MVCMember
 import griffon.metadata.ArtifactProviderFor
 import griffon.transform.FXObservable
 import javafx.scene.control.cell.TextFieldListCell
+import javafx.scene.paint.Color
 
 import javax.annotation.Nonnull
 import griffon.core.artifact.GriffonView
@@ -20,6 +21,9 @@ import javafx.scene.control.TableColumn.CellEditEvent
 import javafx.scene.control.cell.TextFieldTableCell
 import javafx.event.Event
 import groovyx.javafx.beans.FXBindable
+import java.math.RoundingMode
+
+
 
 
 @ArtifactProviderFor(GriffonView)
@@ -31,6 +35,16 @@ class WealthProphetView {
 
     def txtinc
     def valinc
+    def txtSexp
+    def valSexp
+    def txtBexp
+    def valBexp
+    def txtOexp
+    def valOexp
+
+
+
+
     @FXBindable def myscenes = []
     def myapp
     @FXBindable def mystage
@@ -144,34 +158,123 @@ class WealthProphetView {
 
                                         hbox(prefHeight: 25.0, prefWidth: 169.0)
                                         accordion(layoutY: 24.0, prefHeight: 253.0, prefWidth: 169.0, bottomAnchor: 0.0, leftAnchor: 0.0, rightAnchor: 0.0, topAnchor: 0.0) {
-                                            titledPane(animated: false, text: "untitled 1") {
+                                            titledPane(animated: false, text: "Survival Expenses") {
                                                 anchorPane(minHeight: 0.0, minWidth: 0.0, prefHeight: 190.0, prefWidth: 90.0) {
+                                                    vbox(layoutX: 31.6, layoutY: 10.6, prefHeight: 152.0, prefWidth: 200.0, bottomAnchor: 0.0, leftAnchor: 0.0, rightAnchor: 0.0, topAnchor: 0.0){
+                                                        exp = tableView(editable: true) {
+                                                            tableColumn(id: 'typeCol')
+                                                            typeCol.setMinWidth(100);
+                                                            typeCol.setCellValueFactory(
+                                                                    new PropertyValueFactory<MonthlyExpense, String>("type"))
 
-                                                    tableView(layoutX: 31.6, layoutY: 10.6, prefHeight: 152.0, prefWidth: 200.0, bottomAnchor: 0.0, leftAnchor: 0.0, rightAnchor: 0.0, topAnchor: 0.0) {
-                                                        tableColumn(minWidth: 0.0, prefWidth: 64.00000154972076, text: "C1")
-                                                        tableColumn(prefWidth: 88.99999237060547, text: "C2")
+
+                                                            tableColumn(id: 'valueCol')
+                                                            valueCol.setMinWidth(100)
+                                                            valueCol.setCellFactory(TextFieldTableCell.forTableColumn())
+                                                            valueCol.setCellValueFactory(
+                                                                    new PropertyValueFactory<MonthlyExpense, String>("value"))
+                                                            valueCol.setOnEditCommit(
+                                                                    new EventHandler<CellEditEvent<MonthlyExpense, String>>() {
+                                                                        @Override
+                                                                        public void handle(CellEditEvent<MonthlyExpense, String> t) {
+                                                                            ((MonthlyExpense) t.getTableView().getItems().get(
+                                                                                    t.getTablePosition().getRow())
+                                                                            ).value = t.getNewValue()
+                                                                        }
+                                                                    })
+                                                        }
+                                                        exp.setItems(model.dataMEsurv)
+
+                                                        label(text: "Enter Description")
+                                                        this.txtSexp = textField()
+                                                        txtSexp.setPromptText("ex. 'survival exp'")
+                                                        label(text: "Enter Value")
+                                                        this.valSexp = textField()
+                                                        valSexp.setPromptText("ex. '150")
+                                                        butADD = button(text: "ADD", prefWidth: 200.0, addSexpAction)
+
                                                     }
+
                                                 }
 
                                             }
-                                            titledPane(animated: false, text: "untitled 2") {
+                                            titledPane(animated: false, text: "Basic Expenses") {
                                                 anchorPane(minHeight: 0.0, minWidth: 0.0, prefHeight: 180.0, prefWidth: 200.0) {
-                                                    tableView(prefHeight: 177.0, prefWidth: 148.0, bottomAnchor: 0.0, leftAnchor: 0.0, rightAnchor: 0.0, topAnchor: 0.0) {
-                                                        tableColumn(minWidth: 0.0, prefWidth: 65.00000154972076, text: "C1")
-                                                        tableColumn(prefWidth: 86.99999237060547, text: "C2")
+                                                    vbox(layoutX: 31.6, layoutY: 10.6, prefHeight: 152.0, prefWidth: 200.0, bottomAnchor: 0.0, leftAnchor: 0.0, rightAnchor: 0.0, topAnchor: 0.0){
+                                                        exp = tableView(editable: true) {
+                                                            tableColumn(id: 'typeCol')
+                                                            typeCol.setMinWidth(100);
+                                                            typeCol.setCellValueFactory(
+                                                                    new PropertyValueFactory<MonthlyExpense, String>("type"))
+
+
+                                                            tableColumn(id: 'valueCol')
+                                                            valueCol.setMinWidth(100)
+                                                            valueCol.setCellFactory(TextFieldTableCell.forTableColumn())
+                                                            valueCol.setCellValueFactory(
+                                                                    new PropertyValueFactory<MonthlyExpense, String>("value"))
+                                                            valueCol.setOnEditCommit(
+                                                                    new EventHandler<CellEditEvent<MonthlyExpense, String>>() {
+                                                                        @Override
+                                                                        public void handle(CellEditEvent<MonthlyExpense, String> t) {
+                                                                            ((MonthlyExpense) t.getTableView().getItems().get(
+                                                                                    t.getTablePosition().getRow())
+                                                                            ).value = t.getNewValue()
+                                                                        }
+                                                                    })
+                                                        }
+                                                        exp.setItems(model.dataMEbasic)
+
+                                                        label(text: "Enter Description")
+                                                        this.txtBexp = textField()
+                                                        txtBexp.setPromptText("ex. 'survival exp'")
+                                                        label(text: "Enter Value")
+                                                        this.valBexp = textField()
+                                                        valBexp.setPromptText("ex. '150")
+                                                        butADD = button(text: "ADD", prefWidth: 200.0, addBexpAction)
+
                                                     }
 
                                                 }
 
-
                                             }
-                                            titledPane(animated: false, text: "untitled 3") {
+                                            titledPane(animated: false, text: "Other Expenses") {
                                                 anchorPane(minHeight: 0.0, minWidth: 0.0, prefHeight: 180.0, prefWidth: 200.0) {
-                                                    tableView(prefHeight: 177.0, prefWidth: 148.0, bottomAnchor: 0.0, leftAnchor: 0.0, rightAnchor: 0.0, topAnchor: 0.0){
-                                                        tableColumn(minWidth: 0.0, prefWidth: 67.00000154972076, text: "C1")
-                                                        tableColumn(prefWidth: 84.99999237060547, text: "C2")
+                                                    vbox(layoutX: 31.6, layoutY: 10.6, prefHeight: 152.0, prefWidth: 200.0, bottomAnchor: 0.0, leftAnchor: 0.0, rightAnchor: 0.0, topAnchor: 0.0){
+                                                        exp = tableView(editable: true) {
+                                                            tableColumn(id: 'typeCol')
+                                                            typeCol.setMinWidth(100);
+                                                            typeCol.setCellValueFactory(
+                                                                    new PropertyValueFactory<MonthlyExpense, String>("type"))
+
+
+                                                            tableColumn(id: 'valueCol')
+                                                            valueCol.setMinWidth(100)
+                                                            valueCol.setCellFactory(TextFieldTableCell.forTableColumn())
+                                                            valueCol.setCellValueFactory(
+                                                                    new PropertyValueFactory<MonthlyExpense, String>("value"))
+                                                            valueCol.setOnEditCommit(
+                                                                    new EventHandler<CellEditEvent<MonthlyExpense, String>>() {
+                                                                        @Override
+                                                                        public void handle(CellEditEvent<MonthlyExpense, String> t) {
+                                                                            ((MonthlyExpense) t.getTableView().getItems().get(
+                                                                                    t.getTablePosition().getRow())
+                                                                            ).value = t.getNewValue()
+                                                                        }
+                                                                    })
+                                                        }
+                                                        exp.setItems(model.dataMEother)
+
+                                                        label(text: "Enter Description")
+                                                        this.txtOexp = textField()
+                                                        txtOexp.setPromptText("ex. 'survival exp'")
+                                                        label(text: "Enter Value")
+                                                        this.valOexp = textField()
+                                                        valOexp.setPromptText("ex. '150")
+                                                        butADD = button(text: "ADD", prefWidth: 200.0, addOexpAction)
 
                                                     }
+
                                                 }
                                             }
                                         }
@@ -223,6 +326,19 @@ class WealthProphetView {
 
                         }
                         anchorPane( prefHeight: -1.0,  prefWidth: -1.0){
+                            hbox{
+                                vbox{
+                                    pieChart(data: model.budgetPi, title: "Budget Pie Chart")
+                                    label(text: "Survival costs = " + model.budgetPi[0].pieValue.toString() + "  (" +  (model.budgetPi[0].pieValue.toBigDecimal().divide(model.budgetPi.pieValue.sum(), 1, RoundingMode.HALF_EVEN)*100).toString() + "%)",
+                                            font: '14pt verdana')
+                                    label(text: "Basic costs = " + model.budgetPi[1].pieValue.toString() + "  (" +  (model.budgetPi[1].pieValue.toBigDecimal().divide(model.budgetPi.pieValue.sum(), 1, RoundingMode.HALF_EVEN)*100).toString() + "%)",
+                                            font: '14pt verdana')
+                                    label(text: "Other costs = " + model.budgetPi[2].pieValue.toString() + "  (" +  (model.budgetPi[2].pieValue.toBigDecimal().divide(model.budgetPi.pieValue.sum(), 1, RoundingMode.HALF_EVEN)*100).toString() + "%)",
+                                            font: '14pt verdana')
+                                    label(text: "% of Income Saved = (" +  (model.budgetPi[3].pieValue.toBigDecimal().divide(model.budgetPi.pieValue.sum(), 1, RoundingMode.HALF_EVEN)*100).toString() + "%)",
+                                            font: '14pt verdana')
+                                }
+                            }
 
                             vbox(alignment: 'BOTTOM_LEFT', layoutX:2.0, layoutY: 524.0, prefHeight: 27.0, prefWidth=444.0, bottomAnchor: 0.0, leftAnchor: 2.0, rightAnchor: 0.0, topAnchor: 524.0){
                                 button(prefHeight: 25.0, prefWidth: 439.0, text: "Switch It!!!!!!!!!")
@@ -272,6 +388,7 @@ class WealthProphetView {
 
                         textField(id: 'clickLabel2', text: "fdsgdsg"){
                             //println(Calc.getReal(model.xx, model.xx[3].value))
+                            //println(model.budgetPi[2].pieValue)
                         }
 
                     }
@@ -348,7 +465,7 @@ class WealthProphetView {
                                     }
                                 })
                     }
-                    zz.setItems(model.data2)
+                    zz.setItems(model.dataMEsurv)
 
 
                     vbox(prefWidth: 175.0) {
@@ -390,6 +507,7 @@ class WealthProphetView {
             s11 = scene(){
 
                 pane(masterPane)
+
 
             }
             s22 = scene(){

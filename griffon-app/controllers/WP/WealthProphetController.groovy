@@ -36,6 +36,31 @@ class WealthProphetController {
 
     @ControllerAction
     @Threading(Threading.Policy.INSIDE_UITHREAD_ASYNC)
+    void addSexp() {
+        model.dataMEsurv.add(new MonthlyExpense(view.txtSexp.getText(), view.valSexp.getText()))
+        view.txtSexp.clear()
+        view.valSexp.clear()
+    }
+
+    @ControllerAction
+    @Threading(Threading.Policy.INSIDE_UITHREAD_ASYNC)
+    void addBexp() {
+        model.dataMEbasic.add(new MonthlyExpense(view.txtBexp.getText(), view.valBexp.getText()))
+        view.txtBexp.clear()
+        view.valBexp.clear()
+    }
+
+    @ControllerAction
+    @Threading(Threading.Policy.INSIDE_UITHREAD_ASYNC)
+    void addOexp() {
+        model.dataMEother.add(new MonthlyExpense(view.txtOexp.getText(), view.valOexp.getText()))
+        view.txtOexp.clear()
+        view.valOexp.clear()
+    }
+
+
+    @ControllerAction
+    @Threading(Threading.Policy.INSIDE_UITHREAD_ASYNC)
     void switchSc() {
         def i
         i = model.currScene
