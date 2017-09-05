@@ -31,7 +31,12 @@ class WealthProphetModel {
     @FXObservable currScene = 0
 
 
-    Map rates = [infl: "0.02", i: "0.035", iLoC: "0.05", iLoan: "0.05", iStLoan: "0.06", iCarLoan: "0.045", icc: "0.15", rBond: "0.035", rStock: "0.06", deprCar: "0.1", deprHouse: "0.01"]
+    Map rates = [infl: "0.02", i: "0.035",
+                 iLoC: "0.05", iLoan: "0.05",
+                 iStLoan: "0.06", iCarLoan: "0.045",
+                 icc: "0.15", rBond: "0.035", rStock: "0.06",
+                 deprCar: "0.1", deprHouse: "0.01",
+                 apprHouse: "0.02"]
 
     @FXBindable def xx = Calc.collectRates(rates)
     @FXObservable ObservableList<RatesStr> dataRates = FXCollections.observableArrayList(
