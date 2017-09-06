@@ -59,7 +59,7 @@ class WealthProphetView {
 
             scene(id: 'sc3', fill: "#FFCCE5") {
 
-                v = vbox(prefHeight: 800.0, prefWidth: 1200.0){
+                v = vbox(prefHeight: 800.0, prefWidth: 1600.0){
                     menuBar(vgrow: 'NEVER'){
 
                         menu(text: "File"){
@@ -654,7 +654,7 @@ class WealthProphetView {
             this.myscenes = [sc1, sc3, s22, s33, s11 ]
 
 
-            this.mystage = stage(title: 'GroovyFX Hello World', visible: true)
+            this.mystage = stage(title: 'GroovyFX Hello World', visible: false)
             this.mystage.setScene(myscenes[model.currScene])
 
 
