@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Implementation-Title: wealth-prophet
+Build-Date: 2017-09-05
+Implementation-Version: 0.1
+Built-By: benmo
+Build-Revision: 23bbf1e89bd6f3136ca3a401271bafb408ce43f9
+Specification-Title: wealth-prophet
+Build-Time: 18:14:50.060-0600
+Created-By: 1.8.0_141 (Oracle Corporation 25.141-b15)
+Specification-Version: 0.1
+

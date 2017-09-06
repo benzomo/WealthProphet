@@ -661,7 +661,7 @@ class WealthProphetView {
             //st1.hide()
 
         }
-        myapp.setScene(myscenes[4])
+        myapp.setScene(myscenes[1])
     }
 
 }

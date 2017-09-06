@@ -1,0 +1,394 @@
+<?xml version="1.0"?>
+<JDepend>
+    <Packages>
+
+        <Package name="Default">
+            <Stats>
+                <TotalClasses>5</TotalClasses>
+                <ConcreteClasses>5</ConcreteClasses>
+                <AbstractClasses>0</AbstractClasses>
+                <Ca>0</Ca>
+                <Ce>8</Ce>
+                <A>0</A>
+                <I>1</I>
+                <D>0</D>
+                <V>1</V>
+            </Stats>
+
+            <AbstractClasses>
+            </AbstractClasses>
+
+            <ConcreteClasses>
+                <Class sourceFile="Config.groovy">
+                    Config
+                </Class>
+                <Class sourceFile="Config.groovy">
+                    Config$_run_closure1
+                </Class>
+                <Class sourceFile="Config.groovy">
+                    Config$_run_closure2
+                </Class>
+                <Class sourceFile="Config.groovy">
+                    Config$_run_closure2$_closure3
+                </Class>
+                <Class sourceFile="Initialize.groovy">
+                    Initialize
+                </Class>
+            </ConcreteClasses>
+
+            <DependsUpon>
+                <Package>griffon.core</Package>
+                <Package>groovy.lang</Package>
+                <Package>java.lang</Package>
+                <Package>java.lang.ref</Package>
+                <Package>org.codehaus.griffon.runtime.core</Package>
+                <Package>org.codehaus.groovy.reflection</Package>
+                <Package>org.codehaus.groovy.runtime</Package>
+                <Package>org.codehaus.groovy.runtime.callsite</Package>
+            </DependsUpon>
+
+            <UsedBy>
+            </UsedBy>
+        </Package>
+
+        <Package name="WP">
+            <Stats>
+                <TotalClasses>69</TotalClasses>
+                <ConcreteClasses>69</ConcreteClasses>
+                <AbstractClasses>0</AbstractClasses>
+                <Ca>0</Ca>
+                <Ce>20</Ce>
+                <A>0</A>
+                <I>1</I>
+                <D>0</D>
+                <V>1</V>
+            </Stats>
+
+            <AbstractClasses>
+            </AbstractClasses>
+
+            <ConcreteClasses>
+                <Class sourceFile="ApplicationEventHandler.groovy">
+                    WP.ApplicationEventHandler
+                </Class>
+                <Class sourceFile="ApplicationModule.groovy">
+                    WP.ApplicationModule
+                </Class>
+                <Class sourceFile="WealthProphetModel.groovy">
+                    WP.GlobalVarsRCol
+                </Class>
+                <Class sourceFile="WealthProphetModel.groovy">
+                    WP.GlobalVarsRCol1
+                </Class>
+                <Class sourceFile="WealthProphetModel.groovy">
+                    WP.GlobalVarsREAL
+                </Class>
+                <Class sourceFile="WealthProphetModel.groovy">
+                    WP.GlobalVarsREAL$_getReal_closure1
+                </Class>
+                <Class sourceFile="WealthProphetModel.groovy">
+                    WP.InputModel
+                </Class>
+                <Class sourceFile="Launcher.groovy">
+                    WP.Launcher
+                </Class>
+                <Class sourceFile="WealthProphetModel.groovy">
+                    WP.Person
+                </Class>
+                <Class sourceFile="WealthProphetController.groovy">
+                    WP.WealthProphetController
+                </Class>
+                <Class sourceFile="WealthProphetModel.groovy">
+                    WP.WealthProphetModel
+                </Class>
+                <Class sourceFile="WealthProphetView.groovy">
+                    WP.WealthProphetView
+                </Class>
+                <Class sourceFile="WealthProphetView.groovy">
+                    WP.WealthProphetView$_initUI_closure1
+                </Class>
+                <Class sourceFile="WealthProphetView.groovy">
+                    WP.WealthProphetView$_initUI_closure1$_closure2
+                </Class>
+                <Class sourceFile="WealthProphetView.groovy">
+                    WP.WealthProphetView$_initUI_closure1$_closure2$_closure6
+                </Class>
+                <Class sourceFile="WealthProphetView.groovy">
+                    WP.WealthProphetView$_initUI_closure1$_closure2$_closure6$_closure7
+                </Class>
+                <Class sourceFile="WealthProphetView.groovy">
+                    WP.WealthProphetView$_initUI_closure1$_closure2$_closure6$_closure7$_closure10
+                </Class>
+                <Class sourceFile="WealthProphetView.groovy">
+                    WP.WealthProphetView$_initUI_closure1$_closure2$_closure6$_closure7$_closure11
+                </Class>
+                <Class sourceFile="WealthProphetView.groovy">
+                    WP.WealthProphetView$_initUI_closure1$_closure2$_closure6$_closure7$_closure12
+                </Class>
+                <Class sourceFile="WealthProphetView.groovy">
+                    WP.WealthProphetView$_initUI_closure1$_closure2$_closure6$_closure8
+                </Class>
+                <Class sourceFile="WealthProphetView.groovy">
+                    WP.WealthProphetView$_initUI_closure1$_closure2$_closure6$_closure8$_closure13
+                </Class>
+                <Class sourceFile="WealthProphetView.groovy">
+                    WP.WealthProphetView$_initUI_closure1$_closure2$_closure6$_closure8$_closure13$_closure15
+                </Class>
+                <Class sourceFile="WealthProphetView.groovy">
+                    WP.WealthProphetView$_initUI_closure1$_closure2$_closure6$_closure8$_closure13$_closure15$_closure16
+                </Class>
+                <Class sourceFile="WealthProphetView.groovy">
+                    WP.WealthProphetView$_initUI_closure1$_closure2$_closure6$_closure8$_closure13$_closure15$_closure16$_closure18
+                </Class>
+                <Class sourceFile="WealthProphetView.groovy">
+                    WP.WealthProphetView$_initUI_closure1$_closure2$_closure6$_closure8$_closure13$_closure15$_closure16$_closure18$_closure20
+                </Class>
+                <Class sourceFile="WealthProphetView.groovy">
+                    WP.WealthProphetView$_initUI_closure1$_closure2$_closure6$_closure8$_closure13$_closure15$_closure16$_closure18$_closure20$_closure21
+                </Class>
+                <Class sourceFile="WealthProphetView.groovy">
+                    WP.WealthProphetView$_initUI_closure1$_closure2$_closure6$_closure8$_closure13$_closure15$_closure16$_closure18$_closure20$_closure21$_closure24
+                </Class>
+                <Class sourceFile="WealthProphetView.groovy">
+                    WP.WealthProphetView$_initUI_closure1$_closure2$_closure6$_closure8$_closure13$_closure15$_closure16$_closure18$_closure20$_closure21$_closure24$_closure25
+                </Class>
+                <Class sourceFile="WealthProphetView.groovy">
+                    WP.WealthProphetView$_initUI_closure1$_closure2$_closure6$_closure8$_closure13$_closure15$_closure16$_closure18$_closure20$_closure22
+                </Class>
+                <Class sourceFile="WealthProphetView.groovy">
+                    WP.WealthProphetView$_initUI_closure1$_closure2$_closure6$_closure8$_closure13$_closure15$_closure16$_closure18$_closure20$_closure22$_closure26
+                </Class>
+                <Class sourceFile="WealthProphetView.groovy">
+                    WP.WealthProphetView$_initUI_closure1$_closure2$_closure6$_closure8$_closure13$_closure15$_closure16$_closure18$_closure20$_closure22$_closure26$_closure27
+                </Class>
+                <Class sourceFile="WealthProphetView.groovy">
+                    WP.WealthProphetView$_initUI_closure1$_closure2$_closure6$_closure8$_closure13$_closure15$_closure16$_closure18$_closure20$_closure23
+                </Class>
+                <Class sourceFile="WealthProphetView.groovy">
+                    WP.WealthProphetView$_initUI_closure1$_closure2$_closure6$_closure8$_closure13$_closure15$_closure16$_closure18$_closure20$_closure23$_closure28
+                </Class>
+                <Class sourceFile="WealthProphetView.groovy">
+                    WP.WealthProphetView$_initUI_closure1$_closure2$_closure6$_closure8$_closure13$_closure15$_closure16$_closure18$_closure20$_closure23$_closure28$_closure29
+                </Class>
+                <Class sourceFile="WealthProphetView.groovy">
+                    WP.WealthProphetView$_initUI_closure1$_closure2$_closure6$_closure8$_closure13$_closure15$_closure16$_closure19
+                </Class>
+                <Class sourceFile="WealthProphetView.groovy">
+                    WP.WealthProphetView$_initUI_closure1$_closure2$_closure6$_closure8$_closure13$_closure15$_closure16$_closure19$_closure30
+                </Class>
+                <Class sourceFile="WealthProphetView.groovy">
+                    WP.WealthProphetView$_initUI_closure1$_closure2$_closure6$_closure8$_closure13$_closure15$_closure16$_closure19$_closure30$_closure31
+                </Class>
+                <Class sourceFile="WealthProphetView.groovy">
+                    WP.WealthProphetView$_initUI_closure1$_closure2$_closure6$_closure8$_closure13$_closure15$_closure16$_closure19$_closure30$_closure31$_closure34
+                </Class>
+                <Class sourceFile="WealthProphetView.groovy">
+                    WP.WealthProphetView$_initUI_closure1$_closure2$_closure6$_closure8$_closure13$_closure15$_closure16$_closure19$_closure30$_closure31$_closure34$_closure35
+                </Class>
+                <Class sourceFile="WealthProphetView.groovy">
+                    WP.WealthProphetView$_initUI_closure1$_closure2$_closure6$_closure8$_closure13$_closure15$_closure16$_closure19$_closure30$_closure32
+                </Class>
+                <Class sourceFile="WealthProphetView.groovy">
+                    WP.WealthProphetView$_initUI_closure1$_closure2$_closure6$_closure8$_closure13$_closure15$_closure16$_closure19$_closure30$_closure32$_closure36
+                </Class>
+                <Class sourceFile="WealthProphetView.groovy">
+                    WP.WealthProphetView$_initUI_closure1$_closure2$_closure6$_closure8$_closure13$_closure15$_closure16$_closure19$_closure30$_closure32$_closure36$_closure37
+                </Class>
+                <Class sourceFile="WealthProphetView.groovy">
+                    WP.WealthProphetView$_initUI_closure1$_closure2$_closure6$_closure8$_closure13$_closure15$_closure16$_closure19$_closure30$_closure33
+                </Class>
+                <Class sourceFile="WealthProphetView.groovy">
+                    WP.WealthProphetView$_initUI_closure1$_closure2$_closure6$_closure8$_closure13$_closure15$_closure16$_closure19$_closure30$_closure33$_closure38
+                </Class>
+                <Class sourceFile="WealthProphetView.groovy">
+                    WP.WealthProphetView$_initUI_closure1$_closure2$_closure6$_closure8$_closure13$_closure15$_closure16$_closure19$_closure30$_closure33$_closure38$_closure39
+                </Class>
+                <Class sourceFile="WealthProphetView.groovy">
+                    WP.WealthProphetView$_initUI_closure1$_closure2$_closure6$_closure8$_closure13$_closure15$_closure17
+                </Class>
+                <Class sourceFile="WealthProphetView.groovy">
+                    WP.WealthProphetView$_initUI_closure1$_closure2$_closure6$_closure8$_closure13$_closure15$_closure17$_closure40
+                </Class>
+                <Class sourceFile="WealthProphetView.groovy">
+                    WP.WealthProphetView$_initUI_closure1$_closure2$_closure6$_closure8$_closure13$_closure15$_closure17$_closure40$_closure41
+                </Class>
+                <Class sourceFile="WealthProphetView.groovy">
+                    WP.WealthProphetView$_initUI_closure1$_closure2$_closure6$_closure8$_closure13$_closure15$_closure17$_closure40$_closure41$_closure43
+                </Class>
+                <Class sourceFile="WealthProphetView.groovy">
+                    WP.WealthProphetView$_initUI_closure1$_closure2$_closure6$_closure8$_closure13$_closure15$_closure17$_closure40$_closure41$_closure43$_closure44
+                </Class>
+                <Class sourceFile="WealthProphetView.groovy">
+                    WP.WealthProphetView$_initUI_closure1$_closure2$_closure6$_closure8$_closure13$_closure15$_closure17$_closure40$_closure41$_closure43$_closure44$_closure45
+                </Class>
+                <Class sourceFile="WealthProphetView.groovy">
+                    WP.WealthProphetView$_initUI_closure1$_closure2$_closure6$_closure8$_closure13$_closure15$_closure17$_closure40$_closure41$_closure43$_closure44$_closure45$_closure47
+                </Class>
+                <Class sourceFile="WealthProphetView.groovy">
+                    WP.WealthProphetView$_initUI_closure1$_closure2$_closure6$_closure8$_closure13$_closure15$_closure17$_closure40$_closure41$_closure43$_closure44$_closure46
+                </Class>
+                <Class sourceFile="WealthProphetView.groovy">
+                    WP.WealthProphetView$_initUI_closure1$_closure2$_closure6$_closure8$_closure13$_closure15$_closure17$_closure40$_closure41$_closure43$_closure44$_closure46$_closure48
+                </Class>
+                <Class sourceFile="WealthProphetView.groovy">
+                    WP.WealthProphetView$_initUI_closure1$_closure2$_closure6$_closure8$_closure13$_closure15$_closure17$_closure40$_closure42
+                </Class>
+                <Class sourceFile="WealthProphetView.groovy">
+                    WP.WealthProphetView$_initUI_closure1$_closure2$_closure6$_closure8$_closure13$_closure15$_closure17$_closure40$_closure42$_closure49
+                </Class>
+                <Class sourceFile="WealthProphetView.groovy">
+                    WP.WealthProphetView$_initUI_closure1$_closure2$_closure6$_closure8$_closure13$_closure15$_closure17$_closure40$_closure42$_closure49$_closure50
+                </Class>
+                <Class sourceFile="WealthProphetView.groovy">
+                    WP.WealthProphetView$_initUI_closure1$_closure2$_closure6$_closure8$_closure14
+                </Class>
+                <Class sourceFile="WealthProphetView.groovy">
+                    WP.WealthProphetView$_initUI_closure1$_closure2$_closure6$_closure8$_closure14$_closure51
+                </Class>
+                <Class sourceFile="WealthProphetView.groovy">
+                    WP.WealthProphetView$_initUI_closure1$_closure2$_closure6$_closure9
+                </Class>
+                <Class sourceFile="WealthProphetView.groovy">
+                    WP.WealthProphetView$_initUI_closure1$_closure3
+                </Class>
+                <Class sourceFile="WealthProphetView.groovy">
+                    WP.WealthProphetView$_initUI_closure1$_closure3$_closure52
+                </Class>
+                <Class sourceFile="WealthProphetView.groovy">
+                    WP.WealthProphetView$_initUI_closure1$_closure3$_closure52$_closure53
+                </Class>
+                <Class sourceFile="WealthProphetView.groovy">
+                    WP.WealthProphetView$_initUI_closure1$_closure3$_closure52$_closure54
+                </Class>
+                <Class sourceFile="WealthProphetView.groovy">
+                    WP.WealthProphetView$_initUI_closure1$_closure4
+                </Class>
+                <Class sourceFile="WealthProphetView.groovy">
+                    WP.WealthProphetView$_initUI_closure1$_closure4$_closure55
+                </Class>
+                <Class sourceFile="WealthProphetView.groovy">
+                    WP.WealthProphetView$_initUI_closure1$_closure4$_closure55$_closure56
+                </Class>
+                <Class sourceFile="WealthProphetView.groovy">
+                    WP.WealthProphetView$_initUI_closure1$_closure4$_closure55$_closure56$_closure57
+                </Class>
+                <Class sourceFile="WealthProphetView.groovy">
+                    WP.WealthProphetView$_initUI_closure1$_closure5
+                </Class>
+            </ConcreteClasses>
+
+            <DependsUpon>
+                <Package>griffon.core</Package>
+                <Package>griffon.core.event</Package>
+                <Package>griffon.exceptions</Package>
+                <Package>griffon.javafx</Package>
+                <Package>groovy.lang</Package>
+                <Package>groovy.util</Package>
+                <Package>java.beans</Package>
+                <Package>java.lang</Package>
+                <Package>java.lang.ref</Package>
+                <Package>java.math</Package>
+                <Package>java.util</Package>
+                <Package>javafx.application</Package>
+                <Package>javafx.beans.property</Package>
+                <Package>javafx.collections</Package>
+                <Package>org.codehaus.griffon.runtime.core.artifact</Package>
+                <Package>org.codehaus.griffon.runtime.core.injection</Package>
+                <Package>org.codehaus.groovy.reflection</Package>
+                <Package>org.codehaus.groovy.runtime</Package>
+                <Package>org.codehaus.groovy.runtime.callsite</Package>
+                <Package>org.codehaus.groovy.runtime.typehandling</Package>
+            </DependsUpon>
+
+            <UsedBy>
+            </UsedBy>
+        </Package>
+
+        <Package name="griffon.core">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="griffon.core.event">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="griffon.exceptions">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="griffon.javafx">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="groovy.lang">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="groovy.util">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="java.beans">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="java.lang">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="java.lang.ref">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="java.math">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="java.util">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="javafx.application">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="javafx.beans.property">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="javafx.collections">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="org.codehaus.griffon.runtime.core">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="org.codehaus.griffon.runtime.core.artifact">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="org.codehaus.griffon.runtime.core.injection">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="org.codehaus.groovy.reflection">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="org.codehaus.groovy.runtime">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="org.codehaus.groovy.runtime.callsite">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="org.codehaus.groovy.runtime.typehandling">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+    </Packages>
+
+    <Cycles>
+    </Cycles>
+</JDepend>

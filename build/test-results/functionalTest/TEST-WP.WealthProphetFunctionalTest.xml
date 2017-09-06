@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="WP.WealthProphetFunctionalTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2017-09-03T03:04:20" hostname="DESKTOP-HOKP1GT" time="0.357">
+  <properties/>
+  <testcase name="_01_clickButton" classname="WP.WealthProphetFunctionalTest" time="0.357"/>
+  <system-out><![CDATA[5654645
+]]></system-out>
+  <system-err><![CDATA[[Thread-10] INFO org.codehaus.griffon.runtime.core.AbstractApplicationBootstrapper - Griffon 2.12.0
+[Thread-10] INFO org.codehaus.griffon.runtime.core.AbstractApplicationBootstrapper - Build: 2017-09-01T09:14:00.699+0200
+[Thread-10] INFO org.codehaus.griffon.runtime.core.AbstractApplicationBootstrapper - Revision: 22df8e659d5f2b180a92321e1ffcd041365cfda5
+[Thread-10] INFO org.codehaus.griffon.runtime.core.AbstractApplicationBootstrapper - JVM: 1.8.0_141 (Oracle Corporation 25.141-b15)
+[Thread-10] INFO org.codehaus.griffon.runtime.core.AbstractApplicationBootstrapper - OS: Windows 10 10.0 amd64
+[Thread-10] INFO griffon.util.AnnotationUtils - resource bundle loader class with instance org.codehaus.griffon.runtime.util.ClassResourceBundleLoader@1f2c3ab evicted by org.codehaus.griffon.runtime.groovy.util.GroovyScriptResourceBundleLoader@6fe5d904
+[griffon-pool-1-thread-1] INFO org.codehaus.griffon.runtime.javafx.TestJavaFXGriffonApplication - Initializing all startup groups: [wealthProphet]
+[Test worker] INFO org.codehaus.griffon.runtime.javafx.TestJavaFXGriffonApplication - Shutdown is in process
+]]></system-err>
+</testsuite>

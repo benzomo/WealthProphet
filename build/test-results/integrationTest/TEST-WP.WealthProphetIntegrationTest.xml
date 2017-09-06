@@ -1,0 +1,730 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="WP.WealthProphetIntegrationTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2017-09-05T23:23:36" hostname="DESKTOP-HOKP1GT" time="9.496">
+  <properties/>
+  <testcase name="clickButton" classname="WP.WealthProphetIntegrationTest" time="9.496">
+    <failure message="java.lang.AssertionError: &#10;Expected: Labeled has text &quot;0&quot;&#10;     but: was null" type="java.lang.AssertionError">java.lang.AssertionError: 
+Expected: Labeled has text &quot;0&quot;
+     but: was null
+	at org.testfx.api.FxAssert.verifyThatImpl(FxAssert.java:150)
+	at org.testfx.api.FxAssert.verifyThat(FxAssert.java:84)
+	at org.testfx.api.FxAssert$verifyThat.callStatic(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallStatic(CallSiteArray.java:56)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callStatic(AbstractCallSite.java:194)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callStatic(AbstractCallSite.java:214)
+	at WP.WealthProphetIntegrationTest.clickButton(WealthProphetIntegrationTest.groovy:21)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at griffon.javafx.test.GriffonTestFXRule$1.evaluate(GriffonTestFXRule.java:105)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.runTestClass(JUnitTestClassExecuter.java:114)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.execute(JUnitTestClassExecuter.java:57)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassProcessor.processTestClass(JUnitTestClassProcessor.java:66)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
+	at com.sun.proxy.$Proxy1.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:109)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:146)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:128)
+	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:404)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:63)
+	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:46)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:55)
+	at java.lang.Thread.run(Thread.java:748)
+</failure>
+  </testcase>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[[Thread-10] INFO org.codehaus.griffon.runtime.core.AbstractApplicationBootstrapper - Griffon 2.12.0
+[Thread-10] INFO org.codehaus.griffon.runtime.core.AbstractApplicationBootstrapper - Build: 2017-09-01T09:14:00.699+0200
+[Thread-10] INFO org.codehaus.griffon.runtime.core.AbstractApplicationBootstrapper - Revision: 22df8e659d5f2b180a92321e1ffcd041365cfda5
+[Thread-10] INFO org.codehaus.griffon.runtime.core.AbstractApplicationBootstrapper - JVM: 1.8.0_141 (Oracle Corporation 25.141-b15)
+[Thread-10] INFO org.codehaus.griffon.runtime.core.AbstractApplicationBootstrapper - OS: Windows 10 10.0 amd64
+[Thread-10] DEBUG org.codehaus.griffon.runtime.core.AbstractApplicationBootstrapper - Creating module bindings
+[Thread-10] DEBUG griffon.util.ServiceLoaderUtils - Reading definitions from file:/C:/Users/benmo/OneDrive/Apps/WealthProphet/build/classes/groovy/main/META-INF/griffon
+[Thread-10] DEBUG griffon.util.AnnotationUtils - Current module order is [core, javafx-groovy, javafx, groovy, application, testApplicationBootstrapper$InnerClasses, testApplicationBootstrapper$Fields, testJavaFXGriffonApplicationBootstrapper$1]
+[Thread-10] TRACE griffon.util.AnnotationUtils - Processing module 'core'
+[Thread-10] TRACE griffon.util.AnnotationUtils -   depends on '[]'
+[Thread-10] TRACE griffon.util.AnnotationUtils -   adding module 'core', since all dependencies have been added
+[Thread-10] TRACE griffon.util.AnnotationUtils - Processing module 'javafx-groovy'
+[Thread-10] TRACE griffon.util.AnnotationUtils -   depends on '[javafx]'
+[Thread-10] TRACE griffon.util.AnnotationUtils -   checking module 'javafx-groovy' dependencies (1)
+[Thread-10] TRACE griffon.util.AnnotationUtils -   checking module 'javafx-groovy' dependencies: 
+[Thread-10] TRACE griffon.util.AnnotationUtils -   skipped module 'javafx-groovy', since dependency 'javafx' not yet added
+[Thread-10] TRACE griffon.util.AnnotationUtils - Processing module 'javafx'
+[Thread-10] TRACE griffon.util.AnnotationUtils -   depends on '[]'
+[Thread-10] TRACE griffon.util.AnnotationUtils -   adding module 'javafx', since all dependencies have been added
+[Thread-10] TRACE griffon.util.AnnotationUtils - Processing module 'groovy'
+[Thread-10] TRACE griffon.util.AnnotationUtils -   depends on '[]'
+[Thread-10] TRACE griffon.util.AnnotationUtils -   adding module 'groovy', since all dependencies have been added
+[Thread-10] TRACE griffon.util.AnnotationUtils - Processing module 'application'
+[Thread-10] TRACE griffon.util.AnnotationUtils -   depends on '[]'
+[Thread-10] TRACE griffon.util.AnnotationUtils -   adding module 'application', since all dependencies have been added
+[Thread-10] TRACE griffon.util.AnnotationUtils - Processing module 'testApplicationBootstrapper$InnerClasses'
+[Thread-10] TRACE griffon.util.AnnotationUtils -   depends on '[]'
+[Thread-10] TRACE griffon.util.AnnotationUtils -   adding module 'testApplicationBootstrapper$InnerClasses', since all dependencies have been added
+[Thread-10] TRACE griffon.util.AnnotationUtils - Processing module 'testApplicationBootstrapper$Fields'
+[Thread-10] TRACE griffon.util.AnnotationUtils -   depends on '[]'
+[Thread-10] TRACE griffon.util.AnnotationUtils -   adding module 'testApplicationBootstrapper$Fields', since all dependencies have been added
+[Thread-10] TRACE griffon.util.AnnotationUtils - Processing module 'testJavaFXGriffonApplicationBootstrapper$1'
+[Thread-10] TRACE griffon.util.AnnotationUtils -   depends on '[]'
+[Thread-10] TRACE griffon.util.AnnotationUtils -   adding module 'testJavaFXGriffonApplicationBootstrapper$1', since all dependencies have been added
+[Thread-10] DEBUG griffon.util.AnnotationUtils - Current module order is [core, javafx-groovy, javafx, groovy, application, testApplicationBootstrapper$InnerClasses, testApplicationBootstrapper$Fields, testJavaFXGriffonApplicationBootstrapper$1]
+[Thread-10] TRACE griffon.util.AnnotationUtils - Processing module 'javafx-groovy'
+[Thread-10] TRACE griffon.util.AnnotationUtils -   depends on '[javafx]'
+[Thread-10] TRACE griffon.util.AnnotationUtils -   checking module 'javafx-groovy' dependencies (1)
+[Thread-10] TRACE griffon.util.AnnotationUtils -   checking module 'javafx-groovy' dependencies: 
+[Thread-10] TRACE griffon.util.AnnotationUtils -   module 'javafx-groovy' dependency 'javafx' already added
+[Thread-10] TRACE griffon.util.AnnotationUtils -   adding module 'javafx-groovy', since all dependencies have been added
+[Thread-10] TRACE griffon.util.AnnotationUtils - module dependency ordering complete
+[Thread-10] DEBUG griffon.util.AnnotationUtils - computed module order is [core, javafx, groovy, application, testApplicationBootstrapper$InnerClasses, testApplicationBootstrapper$Fields, testJavaFXGriffonApplicationBootstrapper$1, javafx-groovy]
+[Thread-10] DEBUG org.codehaus.griffon.runtime.core.TestApplicationBootstrapper - computed Module order is [core, javafx, groovy, application, testJavaFXGriffonApplicationBootstrapper$1, javafx-groovy, testApplicationBootstrapper$InnerClasses, testApplicationBootstrapper$Fields]
+[Thread-10] DEBUG org.codehaus.griffon.runtime.core.AbstractApplicationBootstrapper - Loading module bindings from core:org.codehaus.griffon.runtime.core.DefaultApplicationModule@5d4a0011
+[Thread-10] DEBUG org.codehaus.griffon.runtime.core.AbstractApplicationBootstrapper - Loading module bindings from javafx:org.codehaus.griffon.runtime.javafx.JavaFXModule@6b0db8d0
+[Thread-10] DEBUG org.codehaus.griffon.runtime.core.AbstractApplicationBootstrapper - Loading module bindings from groovy:org.codehaus.griffon.runtime.groovy.GroovyModule@515db9a4
+[Thread-10] DEBUG org.codehaus.griffon.runtime.core.AbstractApplicationBootstrapper - Loading module bindings from application:WP.ApplicationModule@5636057d
+[Thread-10] DEBUG org.codehaus.griffon.runtime.core.AbstractApplicationBootstrapper - Loading module bindings from testJavaFXGriffonApplicationBootstrapper$1:org.codehaus.griffon.runtime.javafx.TestJavaFXGriffonApplicationBootstrapper$1@5b71cd22
+[Thread-10] DEBUG org.codehaus.griffon.runtime.core.AbstractApplicationBootstrapper - Loading module bindings from javafx-groovy:org.codehaus.griffon.runtime.javafx.JavafxBuilderModule@5d3c35a4
+[Thread-10] DEBUG org.codehaus.griffon.runtime.core.AbstractApplicationBootstrapper - Loading module bindings from testApplicationBootstrapper$InnerClasses:org.codehaus.griffon.runtime.core.TestApplicationBootstrapper$InnerClassesModule@6110273e
+[Thread-10] DEBUG org.codehaus.griffon.runtime.core.AbstractApplicationBootstrapper - Loading module bindings from testApplicationBootstrapper$Fields:org.codehaus.griffon.runtime.core.TestApplicationBootstrapper$FieldsModule@7ebdb8c
+[Thread-10] TRACE org.codehaus.griffon.runtime.core.AbstractApplicationBootstrapper - InstanceBinding[source=griffon.core.GriffonApplication, instance=org.codehaus.griffon.runtime.javafx.TestJavaFXGriffonApplication@5e5d1dcc, singleton=true]
+[Thread-10] TRACE org.codehaus.griffon.runtime.core.AbstractApplicationBootstrapper - TargetBinding[source=WP.WealthProphetController, target=WP.WealthProphetController, singleton=false]
+[Thread-10] TRACE org.codehaus.griffon.runtime.core.AbstractApplicationBootstrapper - TargetBinding[source=WP.WealthProphetModel, target=WP.WealthProphetModel, singleton=false]
+[Thread-10] TRACE org.codehaus.griffon.runtime.core.AbstractApplicationBootstrapper - TargetBinding[source=WP.WealthProphetView, target=WP.WealthProphetView, singleton=false]
+[Thread-10] TRACE org.codehaus.griffon.runtime.core.AbstractApplicationBootstrapper - TargetBinding[source=griffon.core.ApplicationClassLoader, target=org.codehaus.griffon.runtime.core.DefaultApplicationClassLoader, singleton=true]
+[Thread-10] TRACE org.codehaus.griffon.runtime.core.AbstractApplicationBootstrapper - ProviderTypeBinding[source=griffon.core.env.Metadata, providerType=org.codehaus.griffon.runtime.core.env.MetadataProvider, singleton=true]
+[Thread-10] TRACE org.codehaus.griffon.runtime.core.AbstractApplicationBootstrapper - ProviderTypeBinding[source=griffon.core.env.RunMode, providerType=org.codehaus.griffon.runtime.core.env.RunModeProvider, singleton=true]
+[Thread-10] TRACE org.codehaus.griffon.runtime.core.AbstractApplicationBootstrapper - ProviderTypeBinding[source=griffon.core.env.Environment, providerType=org.codehaus.griffon.runtime.core.env.EnvironmentProvider, singleton=true]
+[Thread-10] TRACE org.codehaus.griffon.runtime.core.AbstractApplicationBootstrapper - TargetBinding[source=griffon.core.ContextFactory, target=org.codehaus.griffon.runtime.core.DefaultContextFactory, singleton=true]
+[Thread-10] TRACE org.codehaus.griffon.runtime.core.AbstractApplicationBootstrapper - TargetBinding[source=griffon.util.Instantiator, target=org.codehaus.griffon.runtime.util.DefaultInstantiator, singleton=true]
+[Thread-10] TRACE org.codehaus.griffon.runtime.core.AbstractApplicationBootstrapper - ProviderTypeBinding[source=griffon.util.PropertiesReader, providerType=griffon.util.PropertiesReader$Provider, singleton=true]
+[Thread-10] TRACE org.codehaus.griffon.runtime.core.AbstractApplicationBootstrapper - ProviderTypeBinding[source=griffon.util.ResourceBundleReader, providerType=griffon.util.ResourceBundleReader$Provider, singleton=true]
+[Thread-10] TRACE org.codehaus.griffon.runtime.core.AbstractApplicationBootstrapper - ProviderTypeBinding[source=griffon.core.Context, classifier=@javax.inject.Named(value=applicationContext), providerType=org.codehaus.griffon.runtime.core.DefaultContextProvider, singleton=true]
+[Thread-10] TRACE org.codehaus.griffon.runtime.core.AbstractApplicationBootstrapper - TargetBinding[source=griffon.core.ApplicationConfigurer, target=org.codehaus.griffon.runtime.core.DefaultApplicationConfigurer, singleton=true]
+[Thread-10] TRACE org.codehaus.griffon.runtime.core.AbstractApplicationBootstrapper - TargetBinding[source=griffon.core.resources.ResourceHandler, target=org.codehaus.griffon.runtime.core.resources.DefaultResourceHandler, singleton=true]
+[Thread-10] TRACE org.codehaus.griffon.runtime.core.AbstractApplicationBootstrapper - TargetBinding[source=griffon.util.ResourceBundleLoader, classifier=@javax.inject.Named(value=class), target=org.codehaus.griffon.runtime.util.ClassResourceBundleLoader, singleton=true]
+[Thread-10] TRACE org.codehaus.griffon.runtime.core.AbstractApplicationBootstrapper - TargetBinding[source=griffon.util.ResourceBundleLoader, classifier=@javax.inject.Named(value=properties), target=org.codehaus.griffon.runtime.util.PropertiesResourceBundleLoader, singleton=true]
+[Thread-10] TRACE org.codehaus.griffon.runtime.core.AbstractApplicationBootstrapper - TargetBinding[source=griffon.util.ResourceBundleLoader, classifier=@javax.inject.Named(value=xml), target=org.codehaus.griffon.runtime.util.XmlResourceBundleLoader, singleton=true]
+[Thread-10] TRACE org.codehaus.griffon.runtime.core.AbstractApplicationBootstrapper - TargetBinding[source=griffon.util.CompositeResourceBundleBuilder, target=org.codehaus.griffon.runtime.util.DefaultCompositeResourceBundleBuilder, singleton=true]
+[Thread-10] TRACE org.codehaus.griffon.runtime.core.AbstractApplicationBootstrapper - ProviderBinding[source=java.util.ResourceBundle, classifier=@javax.inject.Named(value=applicationResourceBundle), provider=org.codehaus.griffon.runtime.util.ResourceBundleProvider@21dbaace, singleton=true]
+[Thread-10] TRACE org.codehaus.griffon.runtime.core.AbstractApplicationBootstrapper - TargetBinding[source=griffon.core.configuration.ConfigurationManager, target=org.codehaus.griffon.runtime.core.configuration.DefaultConfigurationManager, singleton=true]
+[Thread-10] TRACE org.codehaus.griffon.runtime.core.AbstractApplicationBootstrapper - TargetBinding[source=org.codehaus.griffon.runtime.core.configuration.ConfigurationDecoratorFactory, target=org.codehaus.griffon.runtime.core.configuration.DefaultConfigurationDecoratorFactory, singleton=false]
+[Thread-10] TRACE org.codehaus.griffon.runtime.core.AbstractApplicationBootstrapper - ProviderTypeBinding[source=griffon.core.Configuration, providerType=org.codehaus.griffon.runtime.core.configuration.ResourceBundleConfigurationProvider, singleton=true]
+[Thread-10] TRACE org.codehaus.griffon.runtime.core.AbstractApplicationBootstrapper - TargetBinding[source=griffon.core.ExecutorServiceManager, target=org.codehaus.griffon.runtime.core.DefaultExecutorServiceManager, singleton=true]
+[Thread-10] TRACE org.codehaus.griffon.runtime.core.AbstractApplicationBootstrapper - TargetBinding[source=griffon.core.event.EventRouter, classifier=@javax.inject.Named(value=applicationEventRouter), target=org.codehaus.griffon.runtime.groovy.event.GroovyAwareDefaultEventRouter, singleton=true]
+[Thread-10] TRACE org.codehaus.griffon.runtime.core.AbstractApplicationBootstrapper - TargetBinding[source=griffon.core.event.EventRouter, target=org.codehaus.griffon.runtime.groovy.event.GroovyAwareDefaultEventRouter, singleton=false]
+[Thread-10] TRACE org.codehaus.griffon.runtime.core.AbstractApplicationBootstrapper - TargetBinding[source=org.codehaus.griffon.runtime.core.resources.ResourceResolverDecoratorFactory, target=org.codehaus.griffon.runtime.groovy.resources.GroovyAwareResourceResolverDecoratorFactory, singleton=false]
+[Thread-10] TRACE org.codehaus.griffon.runtime.core.AbstractApplicationBootstrapper - TargetBinding[source=org.codehaus.griffon.runtime.core.i18n.MessageSourceDecoratorFactory, target=org.codehaus.griffon.runtime.groovy.i18n.GroovyAwareMessageSourceDecoratorFactory, singleton=false]
+[Thread-10] TRACE org.codehaus.griffon.runtime.core.AbstractApplicationBootstrapper - ProviderBinding[source=griffon.core.resources.ResourceResolver, classifier=@javax.inject.Named(value=applicationResourceResolver), provider=org.codehaus.griffon.runtime.core.resources.ResourceResolverProvider@725a349d, singleton=true]
+[Thread-10] TRACE org.codehaus.griffon.runtime.core.AbstractApplicationBootstrapper - ProviderBinding[source=griffon.core.i18n.MessageSource, classifier=@javax.inject.Named(value=applicationMessageSource), provider=org.codehaus.griffon.runtime.core.i18n.MessageSourceProvider@4c78fa7, singleton=true]
+[Thread-10] TRACE org.codehaus.griffon.runtime.core.AbstractApplicationBootstrapper - TargetBinding[source=griffon.core.resources.ResourceInjector, classifier=@javax.inject.Named(value=applicationResourceInjector), target=org.codehaus.griffon.runtime.core.resources.DefaultApplicationResourceInjector, singleton=true]
+[Thread-10] TRACE org.codehaus.griffon.runtime.core.AbstractApplicationBootstrapper - ProviderTypeBinding[source=java.util.concurrent.ExecutorService, classifier=@javax.inject.Named(value=defaultExecutorService), providerType=org.codehaus.griffon.runtime.core.threading.DefaultExecutorServiceProvider, singleton=true]
+[Thread-10] TRACE org.codehaus.griffon.runtime.core.AbstractApplicationBootstrapper - TargetBinding[source=griffon.core.threading.UIThreadManager, target=org.codehaus.griffon.runtime.javafx.JavaFXUIThreadManager, singleton=true]
+[Thread-10] TRACE org.codehaus.griffon.runtime.core.AbstractApplicationBootstrapper - TargetBinding[source=griffon.core.mvc.MVCGroupConfigurationFactory, target=org.codehaus.griffon.runtime.core.mvc.DefaultMVCGroupConfigurationFactory, singleton=true]
+[Thread-10] TRACE org.codehaus.griffon.runtime.core.AbstractApplicationBootstrapper - TargetBinding[source=griffon.core.mvc.MVCGroupFactory, target=org.codehaus.griffon.runtime.groovy.mvc.GroovyAwareMVCGroupFactory, singleton=true]
+[Thread-10] TRACE org.codehaus.griffon.runtime.core.AbstractApplicationBootstrapper - TargetBinding[source=griffon.core.mvc.MVCGroupManager, target=org.codehaus.griffon.runtime.groovy.mvc.GroovyAwareMVCGroupManager, singleton=true]
+[Thread-10] TRACE org.codehaus.griffon.runtime.core.AbstractApplicationBootstrapper - ProviderBinding[source=griffon.core.LifecycleHandler, classifier=@javax.inject.Named(value=Initialize), provider=org.codehaus.griffon.runtime.core.LifecycleHandlerProvider@43622915, singleton=true]
+[Thread-10] TRACE org.codehaus.griffon.runtime.core.AbstractApplicationBootstrapper - ProviderBinding[source=griffon.core.LifecycleHandler, classifier=@javax.inject.Named(value=Startup), provider=org.codehaus.griffon.runtime.core.LifecycleHandlerProvider@3f93666d, singleton=true]
+[Thread-10] TRACE org.codehaus.griffon.runtime.core.AbstractApplicationBootstrapper - ProviderBinding[source=griffon.core.LifecycleHandler, classifier=@javax.inject.Named(value=Ready), provider=org.codehaus.griffon.runtime.core.LifecycleHandlerProvider@1c4e53de, singleton=true]
+[Thread-10] TRACE org.codehaus.griffon.runtime.core.AbstractApplicationBootstrapper - ProviderBinding[source=griffon.core.LifecycleHandler, classifier=@javax.inject.Named(value=Shutdown), provider=org.codehaus.griffon.runtime.core.LifecycleHandlerProvider@244c4d47, singleton=true]
+[Thread-10] TRACE org.codehaus.griffon.runtime.core.AbstractApplicationBootstrapper - ProviderBinding[source=griffon.core.LifecycleHandler, classifier=@javax.inject.Named(value=Stop), provider=org.codehaus.griffon.runtime.core.LifecycleHandlerProvider@76b4e25a, singleton=true]
+[Thread-10] TRACE org.codehaus.griffon.runtime.core.AbstractApplicationBootstrapper - ProviderBinding[source=griffon.core.view.WindowManager, provider=org.codehaus.griffon.runtime.javafx.TestJavaFXWindowManagerProvider@523052ef, singleton=true]
+[Thread-10] TRACE org.codehaus.griffon.runtime.core.AbstractApplicationBootstrapper - TargetBinding[source=griffon.core.controller.ActionManager, target=org.codehaus.griffon.runtime.javafx.controller.JavaFXActionManager, singleton=true]
+[Thread-10] TRACE org.codehaus.griffon.runtime.core.AbstractApplicationBootstrapper - TargetBinding[source=griffon.core.controller.ActionFactory, target=org.codehaus.griffon.runtime.javafx.controller.JavaFXActionFactory, singleton=true]
+[Thread-10] TRACE org.codehaus.griffon.runtime.core.AbstractApplicationBootstrapper - TargetBinding[source=griffon.core.controller.ActionMetadataFactory, target=org.codehaus.griffon.runtime.core.controller.DefaultActionMetadataFactory, singleton=true]
+[Thread-10] TRACE org.codehaus.griffon.runtime.core.AbstractApplicationBootstrapper - TargetBinding[source=griffon.core.artifact.ArtifactManager, target=org.codehaus.griffon.runtime.core.artifact.DefaultArtifactManager, singleton=true]
+[Thread-10] TRACE org.codehaus.griffon.runtime.core.AbstractApplicationBootstrapper - TargetBinding[source=griffon.core.artifact.ArtifactHandler, classifier=@griffon.inject.Typed(value=interface griffon.core.artifact.GriffonModel), target=org.codehaus.griffon.runtime.core.artifact.ModelArtifactHandler, singleton=true]
+[Thread-10] TRACE org.codehaus.griffon.runtime.core.AbstractApplicationBootstrapper - TargetBinding[source=griffon.core.artifact.ArtifactHandler, classifier=@griffon.inject.Typed(value=interface griffon.core.artifact.GriffonView), target=org.codehaus.griffon.runtime.core.artifact.ViewArtifactHandler, singleton=true]
+[Thread-10] TRACE org.codehaus.griffon.runtime.core.AbstractApplicationBootstrapper - TargetBinding[source=griffon.core.artifact.ArtifactHandler, classifier=@griffon.inject.Typed(value=interface griffon.core.artifact.GriffonController), target=org.codehaus.griffon.runtime.core.artifact.ControllerArtifactHandler, singleton=true]
+[Thread-10] TRACE org.codehaus.griffon.runtime.core.AbstractApplicationBootstrapper - TargetBinding[source=griffon.core.artifact.ArtifactHandler, classifier=@griffon.inject.Typed(value=interface griffon.core.artifact.GriffonService), target=org.codehaus.griffon.runtime.core.artifact.ServiceArtifactHandler, singleton=true]
+[Thread-10] TRACE org.codehaus.griffon.runtime.core.AbstractApplicationBootstrapper - ProviderTypeBinding[source=griffon.core.PlatformHandler, providerType=org.codehaus.griffon.runtime.core.PlatformHandlerProvider, singleton=true]
+[Thread-10] TRACE org.codehaus.griffon.runtime.core.AbstractApplicationBootstrapper - TargetBinding[source=griffon.core.addon.AddonManager, target=org.codehaus.griffon.runtime.core.addon.DefaultAddonManager, singleton=true]
+[Thread-10] TRACE org.codehaus.griffon.runtime.core.AbstractApplicationBootstrapper - TargetBinding[source=griffon.core.event.EventHandler, target=WP.ApplicationEventHandler, singleton=true]
+[Thread-10] TRACE org.codehaus.griffon.runtime.core.AbstractApplicationBootstrapper - ProviderTypeBinding[source=griffon.core.ExceptionHandler, providerType=org.codehaus.griffon.runtime.core.GriffonExceptionHandlerProvider, singleton=true]
+[Thread-10] TRACE org.codehaus.griffon.runtime.core.AbstractApplicationBootstrapper - TargetBinding[source=griffon.javafx.JavaFXWindowDisplayHandler, classifier=@javax.inject.Named(value=defaultWindowDisplayHandler), target=org.codehaus.griffon.runtime.javafx.DefaultJavaFXWindowDisplayHandler, singleton=true]
+[Thread-10] TRACE org.codehaus.griffon.runtime.core.AbstractApplicationBootstrapper - TargetBinding[source=griffon.javafx.JavaFXWindowDisplayHandler, classifier=@javax.inject.Named(value=windowDisplayHandler), target=org.codehaus.griffon.runtime.javafx.GroovyAwareConfigurableJavaFXWindowDisplayHandler, singleton=true]
+[Thread-10] TRACE org.codehaus.griffon.runtime.core.AbstractApplicationBootstrapper - InstanceBinding[source=griffon.javafx.support.ActionMatcher, instance=griffon.javafx.support.ActionMatcher$1@3c0e3bd4, singleton=true]
+[Thread-10] TRACE org.codehaus.griffon.runtime.core.AbstractApplicationBootstrapper - ProviderTypeBinding[source=griffon.util.ConfigReader, providerType=griffon.util.ConfigReader$Provider, singleton=true]
+[Thread-10] TRACE org.codehaus.griffon.runtime.core.AbstractApplicationBootstrapper - TargetBinding[source=griffon.util.ResourceBundleLoader, classifier=@javax.inject.Named(value=groovy), target=org.codehaus.griffon.runtime.groovy.util.GroovyScriptResourceBundleLoader, singleton=true]
+[Thread-10] TRACE org.codehaus.griffon.runtime.core.AbstractApplicationBootstrapper - TargetBinding[source=griffon.core.addon.GriffonAddon, classifier=@javax.inject.Named(value=groovy), target=org.codehaus.griffon.runtime.groovy.GroovyAddon, singleton=true]
+[Thread-10] TRACE org.codehaus.griffon.runtime.core.AbstractApplicationBootstrapper - TargetBinding[source=griffon.util.BuilderCustomizer, classifier=@javax.inject.Named(value=core), target=griffon.builder.core.CoreBuilderCustomizer, singleton=true]
+[Thread-10] TRACE org.codehaus.griffon.runtime.core.AbstractApplicationBootstrapper - TargetBinding[source=griffon.util.BuilderCustomizer, classifier=@javax.inject.Named(value=javafx), target=griffon.builder.javafx.JavafxBuilderCustomizer, singleton=true]
+[Thread-10] DEBUG org.codehaus.griffon.runtime.core.AbstractApplicationBootstrapper - Creating application injector
+[Thread-10] DEBUG org.codehaus.griffon.runtime.core.AbstractApplicationBootstrapper - Injector will be created by org.codehaus.griffon.runtime.injection.GuiceInjectorFactory@497b34d4
+[Thread-10] DEBUG griffon.util.AnnotationUtils - computed module order is []
+[Thread-10] DEBUG org.codehaus.griffon.runtime.core.event.AbstractEventRouter - Adding listener org.codehaus.griffon.runtime.core.configuration.AbstractConfigurationManager$1 on NewInstance
+[Thread-10] INFO griffon.util.AnnotationUtils - resource bundle loader class with instance org.codehaus.griffon.runtime.util.ClassResourceBundleLoader@1f9bcc9 evicted by org.codehaus.griffon.runtime.groovy.util.GroovyScriptResourceBundleLoader@1d318e37
+[Thread-10] DEBUG griffon.util.AnnotationUtils - Current resource bundle loader order is [class, properties, xml]
+[Thread-10] TRACE griffon.util.AnnotationUtils - Processing resource bundle loader 'class'
+[Thread-10] TRACE griffon.util.AnnotationUtils -   depends on '[]'
+[Thread-10] TRACE griffon.util.AnnotationUtils -   adding resource bundle loader 'class', since all dependencies have been added
+[Thread-10] TRACE griffon.util.AnnotationUtils - Processing resource bundle loader 'properties'
+[Thread-10] TRACE griffon.util.AnnotationUtils -   depends on '[]'
+[Thread-10] TRACE griffon.util.AnnotationUtils -   adding resource bundle loader 'properties', since all dependencies have been added
+[Thread-10] TRACE griffon.util.AnnotationUtils - Processing resource bundle loader 'xml'
+[Thread-10] TRACE griffon.util.AnnotationUtils -   depends on '[]'
+[Thread-10] TRACE griffon.util.AnnotationUtils -   adding resource bundle loader 'xml', since all dependencies have been added
+[Thread-10] TRACE griffon.util.AnnotationUtils - resource bundle loader dependency ordering complete
+[Thread-10] DEBUG griffon.util.AnnotationUtils - computed resource bundle loader order is [groovy, properties, xml]
+[Thread-10] TRACE griffon.util.CompositeResourceBundle - Searching key=application
+[Thread-10] TRACE griffon.util.CompositeResourceBundle - Bundle griffon.util.ExpandableResourceBundle@109ba843; key=application; value='{title=wealth-prophet, startupGroups=[wealthProphet], autoShutdown=true}'
+[Thread-10] TRACE griffon.util.CompositeResourceBundle - Searching key=application.title
+[Thread-10] TRACE griffon.util.CompositeResourceBundle - Bundle griffon.util.ExpandableResourceBundle@109ba843; key=application.title; value='wealth-prophet'
+[Thread-10] TRACE griffon.util.CompositeResourceBundle - Searching key=application.startupGroups
+[Thread-10] TRACE griffon.util.CompositeResourceBundle - Bundle griffon.util.ExpandableResourceBundle@109ba843; key=application.startupGroups; value='[wealthProphet]'
+[Thread-10] TRACE griffon.util.CompositeResourceBundle - Searching key=application.autoShutdown
+[Thread-10] TRACE griffon.util.CompositeResourceBundle - Bundle griffon.util.ExpandableResourceBundle@109ba843; key=application.autoShutdown; value='true'
+[Thread-10] TRACE griffon.util.CompositeResourceBundle - Searching key=mvcGroups
+[Thread-10] TRACE griffon.util.CompositeResourceBundle - Bundle griffon.util.ExpandableResourceBundle@109ba843; key=mvcGroups; value='{wealthProphet={model=WP.WealthProphetModel, view=WP.WealthProphetView, controller=WP.WealthProphetController}}'
+[Thread-10] TRACE griffon.util.CompositeResourceBundle - Searching key=mvcGroups.wealthProphet.model
+[Thread-10] TRACE griffon.util.CompositeResourceBundle - Bundle griffon.util.ExpandableResourceBundle@109ba843; key=mvcGroups.wealthProphet.model; value='WP.WealthProphetModel'
+[Thread-10] TRACE griffon.util.CompositeResourceBundle - Searching key=mvcGroups.wealthProphet.view
+[Thread-10] TRACE griffon.util.CompositeResourceBundle - Bundle griffon.util.ExpandableResourceBundle@109ba843; key=mvcGroups.wealthProphet.view; value='WP.WealthProphetView'
+[Thread-10] TRACE griffon.util.CompositeResourceBundle - Searching key=mvcGroups.wealthProphet.controller
+[Thread-10] TRACE griffon.util.CompositeResourceBundle - Bundle griffon.util.ExpandableResourceBundle@109ba843; key=mvcGroups.wealthProphet.controller; value='WP.WealthProphetController'
+[Thread-10] DEBUG org.codehaus.griffon.runtime.core.event.AbstractEventRouter - Adding listener org.codehaus.griffon.runtime.core.MVCGroupExceptionHandler on UncaughtMVCGroupConfigurationException
+[Thread-10] DEBUG org.codehaus.griffon.runtime.core.event.AbstractEventRouter - Adding listener org.codehaus.griffon.runtime.core.MVCGroupExceptionHandler on UncaughtMVCGroupInstantiationException
+[Thread-10] DEBUG griffon.util.AnnotationUtils - Current handler order is [application]
+[Thread-10] TRACE griffon.util.AnnotationUtils - Processing handler 'application'
+[Thread-10] TRACE griffon.util.AnnotationUtils -   depends on '[]'
+[Thread-10] TRACE griffon.util.AnnotationUtils -   adding handler 'application', since all dependencies have been added
+[Thread-10] TRACE griffon.util.AnnotationUtils - handler dependency ordering complete
+[Thread-10] DEBUG griffon.util.AnnotationUtils - computed handler order is [application]
+[Thread-10] DEBUG org.codehaus.griffon.runtime.core.event.AbstractEventRouter - Adding listener WP.ApplicationEventHandler@67addf85
+[Thread-10] DEBUG org.codehaus.griffon.runtime.core.event.AbstractEventRouter - Triggering event 'BootstrapStart' synchronously
+[Thread-10] DEBUG griffon.util.ServiceLoaderUtils - Reading java.beans.PropertyEditor definitions from jar:file:/C:/Users/benmo/.gradle/caches/modules-2/files-2.1/org.codehaus.griffon/griffon-core-java8/2.12.0/4d5804df92227d4e324841adc9611a4bf295b8c0/griffon-core-java8-2.12.0.jar!/META-INF/editors/java.beans.PropertyEditor
+[Thread-10] DEBUG org.codehaus.griffon.runtime.core.DefaultApplicationConfigurer - Registering griffon.core.editors.LocalDatePropertyEditor as editor for java.time.LocalDate
+[Thread-10] DEBUG org.codehaus.griffon.runtime.core.DefaultApplicationConfigurer - Registering griffon.core.editors.LocalDateTimePropertyEditor as editor for java.time.LocalDateTime
+[Thread-10] DEBUG org.codehaus.griffon.runtime.core.DefaultApplicationConfigurer - Registering griffon.core.editors.LocalTimePropertyEditor as editor for java.time.LocalTime
+[Thread-10] DEBUG org.codehaus.griffon.runtime.core.DefaultApplicationConfigurer - Registering griffon.core.editors.ExtendedCalendarPropertyEditor as editor for java.util.Calendar
+[Thread-10] DEBUG org.codehaus.griffon.runtime.core.DefaultApplicationConfigurer - Registering griffon.core.editors.ExtendedDatePropertyEditor as editor for java.util.Date
+[Thread-10] DEBUG griffon.util.ServiceLoaderUtils - Reading java.beans.PropertyEditor definitions from jar:file:/C:/Users/benmo/.gradle/caches/modules-2/files-2.1/org.codehaus.griffon/griffon-javafx/2.12.0/702500211d50d9e1a983db82d169ee4f6135899c/griffon-javafx-2.12.0.jar!/META-INF/editors/java.beans.PropertyEditor
+[Thread-10] DEBUG org.codehaus.griffon.runtime.core.DefaultApplicationConfigurer - Registering griffon.javafx.editors.Dimension2DPropertyEditor as editor for javafx.geometry.Dimension2D
+[Thread-10] DEBUG org.codehaus.griffon.runtime.core.DefaultApplicationConfigurer - Registering griffon.javafx.editors.InsetsPropertyEditor as editor for javafx.geometry.Insets
+[Thread-10] DEBUG org.codehaus.griffon.runtime.core.DefaultApplicationConfigurer - Registering griffon.javafx.editors.Point2DPropertyEditor as editor for javafx.geometry.Point2D
+[Thread-10] DEBUG org.codehaus.griffon.runtime.core.DefaultApplicationConfigurer - Registering griffon.javafx.editors.Rectangle2DPropertyEditor as editor for javafx.geometry.Rectangle2D
+[Thread-10] DEBUG org.codehaus.griffon.runtime.core.DefaultApplicationConfigurer - Registering griffon.javafx.editors.GraphicPropertyEditor as editor for javafx.scene.Node
+[Thread-10] DEBUG org.codehaus.griffon.runtime.core.DefaultApplicationConfigurer - Registering griffon.javafx.editors.ImagePropertyEditor as editor for javafx.scene.image.Image
+[Thread-10] DEBUG org.codehaus.griffon.runtime.core.DefaultApplicationConfigurer - Registering griffon.javafx.editors.ColorPropertyEditor as editor for javafx.scene.paint.Color
+[Thread-10] DEBUG org.codehaus.griffon.runtime.core.DefaultApplicationConfigurer - Registering griffon.javafx.editors.LinearGradientPropertyEditor as editor for javafx.scene.paint.LinearGradient
+[Thread-10] DEBUG org.codehaus.griffon.runtime.core.DefaultApplicationConfigurer - Registering griffon.javafx.editors.PaintPropertyEditor as editor for javafx.scene.paint.Paint
+[Thread-10] DEBUG org.codehaus.griffon.runtime.core.DefaultApplicationConfigurer - Registering griffon.javafx.editors.RadialGradientPropertyEditor as editor for javafx.scene.paint.RadialGradient
+[Thread-10] DEBUG griffon.util.ServiceLoaderUtils - Reading java.beans.PropertyEditor definitions from jar:file:/C:/Users/benmo/.gradle/caches/modules-2/files-2.1/org.codehaus.griffon/griffon-core/2.12.0/d79e1c5177e78c18d8c1f99d5e00f8c9c2a193e9/griffon-core-2.12.0.jar!/META-INF/editors/java.beans.PropertyEditor
+[Thread-10] DEBUG org.codehaus.griffon.runtime.core.DefaultApplicationConfigurer - Registering griffon.core.editors.StringPropertyEditor as editor for java.lang.String
+[Thread-10] DEBUG org.codehaus.griffon.runtime.core.DefaultApplicationConfigurer - Registering griffon.core.editors.FilePropertyEditor as editor for java.io.File
+[Thread-10] DEBUG org.codehaus.griffon.runtime.core.DefaultApplicationConfigurer - Registering griffon.core.editors.URLPropertyEditor as editor for java.net.URL
+[Thread-10] DEBUG org.codehaus.griffon.runtime.core.DefaultApplicationConfigurer - Registering griffon.core.editors.URIPropertyEditor as editor for java.net.URI
+[Thread-10] DEBUG org.codehaus.griffon.runtime.core.DefaultApplicationConfigurer - Registering griffon.core.editors.BigDecimalPropertyEditor as editor for java.math.BigDecimal
+[Thread-10] DEBUG org.codehaus.griffon.runtime.core.DefaultApplicationConfigurer - Registering griffon.core.editors.BigIntegerPropertyEditor as editor for java.math.BigInteger
+[Thread-10] DEBUG org.codehaus.griffon.runtime.core.DefaultApplicationConfigurer - Registering griffon.core.editors.BooleanPropertyEditor as editor for java.lang.Boolean
+[Thread-10] DEBUG org.codehaus.griffon.runtime.core.DefaultApplicationConfigurer - Registering griffon.core.editors.BytePropertyEditor as editor for java.lang.Byte
+[Thread-10] DEBUG org.codehaus.griffon.runtime.core.DefaultApplicationConfigurer - Registering griffon.core.editors.ShortPropertyEditor as editor for java.lang.Short
+[Thread-10] DEBUG org.codehaus.griffon.runtime.core.DefaultApplicationConfigurer - Registering griffon.core.editors.IntegerPropertyEditor as editor for java.lang.Integer
+[Thread-10] DEBUG org.codehaus.griffon.runtime.core.DefaultApplicationConfigurer - Registering griffon.core.editors.LongPropertyEditor as editor for java.lang.Long
+[Thread-10] DEBUG org.codehaus.griffon.runtime.core.DefaultApplicationConfigurer - Registering griffon.core.editors.FloatPropertyEditor as editor for java.lang.Float
+[Thread-10] DEBUG org.codehaus.griffon.runtime.core.DefaultApplicationConfigurer - Registering griffon.core.editors.DoublePropertyEditor as editor for java.lang.Double
+[Thread-10] DEBUG org.codehaus.griffon.runtime.core.DefaultApplicationConfigurer - Registering griffon.core.editors.CalendarPropertyEditor as editor for java.util.Calendar
+[Thread-10] DEBUG org.codehaus.griffon.runtime.core.DefaultApplicationConfigurer - Registering griffon.core.editors.DatePropertyEditor as editor for java.util.Date
+[Thread-10] DEBUG org.codehaus.griffon.runtime.core.DefaultApplicationConfigurer - Registering griffon.core.editors.LocalePropertyEditor as editor for java.util.Locale
+[Thread-10] TRACE griffon.core.editors.PropertyEditorResolver - Searching PropertyEditor for java.lang.Boolean
+[Thread-10] TRACE griffon.core.editors.PropertyEditorResolver - PropertyEditor for java.lang.Boolean is griffon.core.editors.BooleanPropertyEditor
+[Thread-10] DEBUG org.codehaus.griffon.runtime.core.DefaultApplicationConfigurer - Registering griffon.core.editors.BooleanPropertyEditor as editor for boolean
+[Thread-10] TRACE griffon.core.editors.PropertyEditorResolver - Searching PropertyEditor for java.lang.Byte
+[Thread-10] TRACE griffon.core.editors.PropertyEditorResolver - PropertyEditor for java.lang.Byte is griffon.core.editors.BytePropertyEditor
+[Thread-10] DEBUG org.codehaus.griffon.runtime.core.DefaultApplicationConfigurer - Registering griffon.core.editors.BytePropertyEditor as editor for byte
+[Thread-10] TRACE griffon.core.editors.PropertyEditorResolver - Searching PropertyEditor for java.lang.Short
+[Thread-10] TRACE griffon.core.editors.PropertyEditorResolver - PropertyEditor for java.lang.Short is griffon.core.editors.ShortPropertyEditor
+[Thread-10] DEBUG org.codehaus.griffon.runtime.core.DefaultApplicationConfigurer - Registering griffon.core.editors.ShortPropertyEditor as editor for short
+[Thread-10] TRACE griffon.core.editors.PropertyEditorResolver - Searching PropertyEditor for java.lang.Integer
+[Thread-10] TRACE griffon.core.editors.PropertyEditorResolver - PropertyEditor for java.lang.Integer is griffon.core.editors.IntegerPropertyEditor
+[Thread-10] DEBUG org.codehaus.griffon.runtime.core.DefaultApplicationConfigurer - Registering griffon.core.editors.IntegerPropertyEditor as editor for int
+[Thread-10] TRACE griffon.core.editors.PropertyEditorResolver - Searching PropertyEditor for java.lang.Long
+[Thread-10] TRACE griffon.core.editors.PropertyEditorResolver - PropertyEditor for java.lang.Long is griffon.core.editors.LongPropertyEditor
+[Thread-10] DEBUG org.codehaus.griffon.runtime.core.DefaultApplicationConfigurer - Registering griffon.core.editors.LongPropertyEditor as editor for long
+[Thread-10] TRACE griffon.core.editors.PropertyEditorResolver - Searching PropertyEditor for java.lang.Float
+[Thread-10] TRACE griffon.core.editors.PropertyEditorResolver - PropertyEditor for java.lang.Float is griffon.core.editors.FloatPropertyEditor
+[Thread-10] DEBUG org.codehaus.griffon.runtime.core.DefaultApplicationConfigurer - Registering griffon.core.editors.FloatPropertyEditor as editor for float
+[Thread-10] TRACE griffon.core.editors.PropertyEditorResolver - Searching PropertyEditor for java.lang.Double
+[Thread-10] TRACE griffon.core.editors.PropertyEditorResolver - PropertyEditor for java.lang.Double is griffon.core.editors.DoublePropertyEditor
+[Thread-10] DEBUG org.codehaus.griffon.runtime.core.DefaultApplicationConfigurer - Registering griffon.core.editors.DoublePropertyEditor as editor for double
+[Thread-10] DEBUG org.codehaus.griffon.runtime.core.event.AbstractEventRouter - Adding listener org.codehaus.griffon.runtime.core.DefaultApplicationConfigurer$2 on NewInstance
+[Thread-10] TRACE griffon.util.CompositeResourceBundle - Searching key=application.lifecycle.handler.disable
+[Thread-10] TRACE griffon.util.CompositeResourceBundle - Searching key=application
+[Thread-10] TRACE griffon.util.CompositeResourceBundle - Bundle griffon.util.ExpandableResourceBundle@109ba843; key=application; value='{title=wealth-prophet, startupGroups=[wealthProphet], autoShutdown=true}'
+[Thread-10] TRACE griffon.util.CompositeResourceBundle - Searching key=platform.handler.windows64
+[Thread-10] TRACE griffon.util.CompositeResourceBundle - Searching key=platform
+[Thread-10] DEBUG org.codehaus.griffon.runtime.core.PlatformHandlerProvider - Using org.codehaus.griffon.runtime.core.DefaultPlatformHandler as PlatformHandler
+[Thread-10] DEBUG org.codehaus.griffon.runtime.core.addon.AbstractAddonManager - Loading addons [START]
+[Thread-10] DEBUG griffon.util.AnnotationUtils - Current addon order is [groovy]
+[Thread-10] TRACE griffon.util.AnnotationUtils - Processing addon 'groovy'
+[Thread-10] TRACE griffon.util.AnnotationUtils -   depends on '[]'
+[Thread-10] TRACE griffon.util.AnnotationUtils -   adding addon 'groovy', since all dependencies have been added
+[Thread-10] TRACE griffon.util.AnnotationUtils - addon dependency ordering complete
+[Thread-10] DEBUG griffon.util.AnnotationUtils - computed addon order is [groovy]
+[Thread-10] DEBUG org.codehaus.griffon.runtime.core.event.AbstractEventRouter - Triggering event 'LoadAddonsStart' synchronously
+[Thread-10] DEBUG org.codehaus.griffon.runtime.core.addon.AbstractAddonManager - Loading addon groovy with class org.codehaus.griffon.runtime.groovy.GroovyAddon
+[Thread-10] DEBUG org.codehaus.griffon.runtime.core.event.AbstractEventRouter - Triggering event 'LoadAddonStart' synchronously
+[Thread-10] DEBUG org.codehaus.griffon.runtime.core.event.AbstractEventRouter - Adding listener org.codehaus.griffon.runtime.groovy.GroovyAddon@c729586
+[Thread-10] DEBUG org.codehaus.griffon.runtime.core.event.AbstractEventRouter - Triggering event 'LoadAddonEnd' synchronously
+[Thread-10] DEBUG org.codehaus.griffon.runtime.core.addon.AbstractAddonManager - Loaded addon groovy
+[Thread-10] DEBUG org.codehaus.griffon.runtime.core.addon.AbstractAddonManager - Loading addons [END]
+[Thread-10] DEBUG org.codehaus.griffon.runtime.core.event.AbstractEventRouter - Triggering event 'LoadAddonsEnd' synchronously
+[Thread-10] TRACE griffon.util.CompositeResourceBundle - Searching key=mvcGroups
+[Thread-10] TRACE griffon.util.CompositeResourceBundle - Bundle griffon.util.ExpandableResourceBundle@109ba843; key=mvcGroups; value='{wealthProphet={model=WP.WealthProphetModel, view=WP.WealthProphetView, controller=WP.WealthProphetController}}'
+[Thread-10] DEBUG org.codehaus.griffon.runtime.core.DefaultApplicationConfigurer - Adding MVC group wealthProphet
+[Thread-10] DEBUG org.codehaus.griffon.runtime.core.event.AbstractEventRouter - Adding listener org.codehaus.griffon.runtime.core.DefaultApplicationConfigurer$3 on NewInstance
+[Thread-10] TRACE griffon.util.CompositeResourceBundle - Searching key=griffon.controller.action.handler.order
+[Thread-10] TRACE griffon.util.CompositeResourceBundle - Searching key=griffon
+[Thread-10] DEBUG griffon.util.AnnotationUtils - computed handler order is []
+[Thread-10] DEBUG org.codehaus.griffon.runtime.core.artifact.AbstractArtifactManager - Registering artifact handler for type 'model': org.codehaus.griffon.runtime.core.artifact.ModelArtifactHandler@7942c66c
+[Thread-10] DEBUG org.codehaus.griffon.runtime.core.artifact.AbstractArtifactManager - Registering artifact handler for type 'view': org.codehaus.griffon.runtime.core.artifact.ViewArtifactHandler@21cf7f14
+[Thread-10] DEBUG org.codehaus.griffon.runtime.core.artifact.AbstractArtifactManager - Registering artifact handler for type 'controller': org.codehaus.griffon.runtime.core.artifact.ControllerArtifactHandler@464578c
+[Thread-10] DEBUG org.codehaus.griffon.runtime.core.artifact.AbstractArtifactManager - Registering artifact handler for type 'service': org.codehaus.griffon.runtime.core.artifact.ServiceArtifactHandler@4d2a3e03
+[Thread-10] DEBUG griffon.util.ServiceLoaderUtils - Reading griffon.core.artifact.GriffonView definitions from file:/C:/Users/benmo/OneDrive/Apps/WealthProphet/build/classes/groovy/main/META-INF/griffon/griffon.core.artifact.GriffonView
+[Thread-10] DEBUG griffon.util.ServiceLoaderUtils - Reading griffon.core.artifact.GriffonController definitions from file:/C:/Users/benmo/OneDrive/Apps/WealthProphet/build/classes/groovy/main/META-INF/griffon/griffon.core.artifact.GriffonController
+[Thread-10] DEBUG griffon.util.ServiceLoaderUtils - Reading griffon.core.artifact.GriffonModel definitions from file:/C:/Users/benmo/OneDrive/Apps/WealthProphet/build/classes/groovy/main/META-INF/griffon/griffon.core.artifact.GriffonModel
+[Thread-10] DEBUG org.codehaus.griffon.runtime.core.artifact.DefaultArtifactManager - Artifacts of type 'view' = 1
+[Thread-10] DEBUG org.codehaus.griffon.runtime.core.artifact.DefaultArtifactManager - Artifacts of type 'controller' = 1
+[Thread-10] DEBUG org.codehaus.griffon.runtime.core.artifact.DefaultArtifactManager - Artifacts of type 'model' = 1
+[Thread-10] DEBUG org.codehaus.griffon.runtime.core.event.AbstractEventRouter - Triggering event 'BootstrapEnd' synchronously
+[Test worker] DEBUG org.codehaus.griffon.runtime.core.event.AbstractEventRouter - Adding listener griffon.javafx.test.GriffonTestFXRule$WindowShownHandler on WindowShown
+[griffon-pool-1-thread-1] DEBUG org.codehaus.griffon.runtime.core.event.AbstractEventRouter - Triggering event 'StartupStart' synchronously
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.startupGroups
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Bundle griffon.util.ExpandableResourceBundle@109ba843; key=application.startupGroups; value='[wealthProphet]'
+[griffon-pool-1-thread-1] INFO org.codehaus.griffon.runtime.javafx.TestJavaFXGriffonApplication - Initializing all startup groups: [wealthProphet]
+[griffon-pool-1-thread-1] DEBUG org.codehaus.griffon.runtime.core.mvc.AbstractMVCGroupManager - Searching group wealthProphet
+[griffon-pool-1-thread-1] DEBUG org.codehaus.griffon.runtime.core.mvc.DefaultMVCGroupManager - Building MVC group 'wealthProphet' with name 'wealthProphet'
+[griffon-pool-1-thread-1] DEBUG org.codehaus.griffon.runtime.core.artifact.AbstractArtifactManager - Searching for griffonClass of WP.WealthProphetModel
+[griffon-pool-1-thread-1] DEBUG org.codehaus.griffon.runtime.core.artifact.AbstractArtifactManager - Searching for griffonClass of WP.WealthProphetView
+[griffon-pool-1-thread-1] DEBUG org.codehaus.griffon.runtime.core.artifact.AbstractArtifactManager - Searching for griffonClass of WP.WealthProphetController
+[griffon-pool-1-thread-1] DEBUG org.codehaus.griffon.runtime.core.artifact.AbstractArtifactManager - Searching for griffonClass of WP.WealthProphetModel
+[griffon-pool-1-thread-1] DEBUG org.codehaus.griffon.runtime.core.artifact.AbstractArtifactManager - Searching for griffonClass of WP.WealthProphetModel
+[griffon-pool-1-thread-1] DEBUG org.codehaus.griffon.runtime.core.event.AbstractEventRouter - Triggering event 'NewInstance' synchronously
+[griffon-pool-1-thread-1] DEBUG org.codehaus.griffon.runtime.core.artifact.AbstractArtifactManager - Searching for griffonClass of WP.WealthProphetView
+[griffon-pool-1-thread-1] DEBUG org.codehaus.griffon.runtime.core.artifact.AbstractArtifactManager - Searching for griffonClass of WP.WealthProphetView
+[JavaFX Application Thread] DEBUG org.codehaus.griffon.runtime.core.event.AbstractEventRouter - Triggering event 'NewInstance' synchronously
+[griffon-pool-1-thread-1] DEBUG org.codehaus.griffon.runtime.core.artifact.AbstractArtifactManager - Searching for griffonClass of WP.WealthProphetController
+[griffon-pool-1-thread-1] DEBUG org.codehaus.griffon.runtime.core.artifact.AbstractArtifactManager - Searching for griffonClass of WP.WealthProphetController
+[griffon-pool-1-thread-1] DEBUG org.codehaus.griffon.runtime.core.event.AbstractEventRouter - Triggering event 'NewInstance' synchronously
+[griffon-pool-1-thread-1] DEBUG org.codehaus.griffon.runtime.core.artifact.AbstractArtifactManager - Searching for griffonClass of WP.WealthProphetController
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.AddAss.name
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.AddAss.name
+[griffon-pool-1-thread-1] TRACE org.codehaus.griffon.runtime.javafx.controller.JavaFXActionManager - WP.WealthProphetController.action.AddAss.name = Add Ass
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.AddAss.accelerator
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.AddAss.accelerator
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.AddAss.description
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.AddAss.description
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.AddAss.icon
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.AddAss.icon
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.AddAss.image
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.AddAss.image
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.AddAss.enabled
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.AddAss.enabled
+[griffon-pool-1-thread-1] TRACE org.codehaus.griffon.runtime.javafx.controller.JavaFXActionManager - WP.WealthProphetController.action.AddAss.enabled = true
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.AddAss.selected
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.AddAss.selected
+[griffon-pool-1-thread-1] TRACE org.codehaus.griffon.runtime.javafx.controller.JavaFXActionManager - WP.WealthProphetController.action.AddAss.selected = false
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.AddAss.visible
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.AddAss.visible
+[griffon-pool-1-thread-1] TRACE org.codehaus.griffon.runtime.javafx.controller.JavaFXActionManager - WP.WealthProphetController.action.AddAss.visible = true
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.AddAss.styleclass
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.AddAss.styleclass
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.AddAss.style
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.AddAss.style
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.AddAss.graphic_styleclass
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.AddAss.graphic_styleclass
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.AddAss.graphic_style
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.AddAss.graphic_style
+[griffon-pool-1-thread-1] TRACE griffon.core.editors.PropertyEditorResolver - Searching PropertyEditor for javafx.scene.image.Image
+[griffon-pool-1-thread-1] TRACE griffon.core.editors.PropertyEditorResolver - PropertyEditor for javafx.scene.image.Image is griffon.javafx.editors.ImagePropertyEditor
+[griffon-pool-1-thread-1] TRACE org.codehaus.griffon.runtime.core.controller.AbstractActionManager - Action for WP.WealthProphetController.addAss stored as addAss
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.AddBexp.name
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.AddBexp.name
+[griffon-pool-1-thread-1] TRACE org.codehaus.griffon.runtime.javafx.controller.JavaFXActionManager - WP.WealthProphetController.action.AddBexp.name = Add Bexp
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.AddBexp.accelerator
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.AddBexp.accelerator
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.AddBexp.description
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.AddBexp.description
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.AddBexp.icon
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.AddBexp.icon
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.AddBexp.image
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.AddBexp.image
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.AddBexp.enabled
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.AddBexp.enabled
+[griffon-pool-1-thread-1] TRACE org.codehaus.griffon.runtime.javafx.controller.JavaFXActionManager - WP.WealthProphetController.action.AddBexp.enabled = true
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.AddBexp.selected
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.AddBexp.selected
+[griffon-pool-1-thread-1] TRACE org.codehaus.griffon.runtime.javafx.controller.JavaFXActionManager - WP.WealthProphetController.action.AddBexp.selected = false
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.AddBexp.visible
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.AddBexp.visible
+[griffon-pool-1-thread-1] TRACE org.codehaus.griffon.runtime.javafx.controller.JavaFXActionManager - WP.WealthProphetController.action.AddBexp.visible = true
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.AddBexp.styleclass
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.AddBexp.styleclass
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.AddBexp.style
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.AddBexp.style
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.AddBexp.graphic_styleclass
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.AddBexp.graphic_styleclass
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.AddBexp.graphic_style
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.AddBexp.graphic_style
+[griffon-pool-1-thread-1] TRACE griffon.core.editors.PropertyEditorResolver - Searching PropertyEditor for javafx.scene.image.Image
+[griffon-pool-1-thread-1] TRACE griffon.core.editors.PropertyEditorResolver - PropertyEditor for javafx.scene.image.Image is griffon.javafx.editors.ImagePropertyEditor
+[griffon-pool-1-thread-1] TRACE org.codehaus.griffon.runtime.core.controller.AbstractActionManager - Action for WP.WealthProphetController.addBexp stored as addBexp
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.AddIncome.name
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.AddIncome.name
+[griffon-pool-1-thread-1] TRACE org.codehaus.griffon.runtime.javafx.controller.JavaFXActionManager - WP.WealthProphetController.action.AddIncome.name = Add Income
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.AddIncome.accelerator
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.AddIncome.accelerator
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.AddIncome.description
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.AddIncome.description
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.AddIncome.icon
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.AddIncome.icon
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.AddIncome.image
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.AddIncome.image
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.AddIncome.enabled
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.AddIncome.enabled
+[griffon-pool-1-thread-1] TRACE org.codehaus.griffon.runtime.javafx.controller.JavaFXActionManager - WP.WealthProphetController.action.AddIncome.enabled = true
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.AddIncome.selected
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.AddIncome.selected
+[griffon-pool-1-thread-1] TRACE org.codehaus.griffon.runtime.javafx.controller.JavaFXActionManager - WP.WealthProphetController.action.AddIncome.selected = false
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.AddIncome.visible
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.AddIncome.visible
+[griffon-pool-1-thread-1] TRACE org.codehaus.griffon.runtime.javafx.controller.JavaFXActionManager - WP.WealthProphetController.action.AddIncome.visible = true
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.AddIncome.styleclass
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.AddIncome.styleclass
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.AddIncome.style
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.AddIncome.style
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.AddIncome.graphic_styleclass
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.AddIncome.graphic_styleclass
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.AddIncome.graphic_style
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.AddIncome.graphic_style
+[griffon-pool-1-thread-1] TRACE griffon.core.editors.PropertyEditorResolver - Searching PropertyEditor for javafx.scene.image.Image
+[griffon-pool-1-thread-1] TRACE griffon.core.editors.PropertyEditorResolver - PropertyEditor for javafx.scene.image.Image is griffon.javafx.editors.ImagePropertyEditor
+[griffon-pool-1-thread-1] TRACE org.codehaus.griffon.runtime.core.controller.AbstractActionManager - Action for WP.WealthProphetController.addIncome stored as addIncome
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.AddLiab.name
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.AddLiab.name
+[griffon-pool-1-thread-1] TRACE org.codehaus.griffon.runtime.javafx.controller.JavaFXActionManager - WP.WealthProphetController.action.AddLiab.name = Add Liab
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.AddLiab.accelerator
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.AddLiab.accelerator
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.AddLiab.description
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.AddLiab.description
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.AddLiab.icon
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.AddLiab.icon
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.AddLiab.image
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.AddLiab.image
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.AddLiab.enabled
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.AddLiab.enabled
+[griffon-pool-1-thread-1] TRACE org.codehaus.griffon.runtime.javafx.controller.JavaFXActionManager - WP.WealthProphetController.action.AddLiab.enabled = true
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.AddLiab.selected
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.AddLiab.selected
+[griffon-pool-1-thread-1] TRACE org.codehaus.griffon.runtime.javafx.controller.JavaFXActionManager - WP.WealthProphetController.action.AddLiab.selected = false
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.AddLiab.visible
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.AddLiab.visible
+[griffon-pool-1-thread-1] TRACE org.codehaus.griffon.runtime.javafx.controller.JavaFXActionManager - WP.WealthProphetController.action.AddLiab.visible = true
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.AddLiab.styleclass
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.AddLiab.styleclass
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.AddLiab.style
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.AddLiab.style
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.AddLiab.graphic_styleclass
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.AddLiab.graphic_styleclass
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.AddLiab.graphic_style
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.AddLiab.graphic_style
+[griffon-pool-1-thread-1] TRACE griffon.core.editors.PropertyEditorResolver - Searching PropertyEditor for javafx.scene.image.Image
+[griffon-pool-1-thread-1] TRACE griffon.core.editors.PropertyEditorResolver - PropertyEditor for javafx.scene.image.Image is griffon.javafx.editors.ImagePropertyEditor
+[griffon-pool-1-thread-1] TRACE org.codehaus.griffon.runtime.core.controller.AbstractActionManager - Action for WP.WealthProphetController.addLiab stored as addLiab
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.AddOexp.name
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.AddOexp.name
+[griffon-pool-1-thread-1] TRACE org.codehaus.griffon.runtime.javafx.controller.JavaFXActionManager - WP.WealthProphetController.action.AddOexp.name = Add Oexp
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.AddOexp.accelerator
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.AddOexp.accelerator
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.AddOexp.description
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.AddOexp.description
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.AddOexp.icon
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.AddOexp.icon
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.AddOexp.image
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.AddOexp.image
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.AddOexp.enabled
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.AddOexp.enabled
+[griffon-pool-1-thread-1] TRACE org.codehaus.griffon.runtime.javafx.controller.JavaFXActionManager - WP.WealthProphetController.action.AddOexp.enabled = true
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.AddOexp.selected
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.AddOexp.selected
+[griffon-pool-1-thread-1] TRACE org.codehaus.griffon.runtime.javafx.controller.JavaFXActionManager - WP.WealthProphetController.action.AddOexp.selected = false
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.AddOexp.visible
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.AddOexp.visible
+[griffon-pool-1-thread-1] TRACE org.codehaus.griffon.runtime.javafx.controller.JavaFXActionManager - WP.WealthProphetController.action.AddOexp.visible = true
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.AddOexp.styleclass
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.AddOexp.styleclass
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.AddOexp.style
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.AddOexp.style
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.AddOexp.graphic_styleclass
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.AddOexp.graphic_styleclass
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.AddOexp.graphic_style
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.AddOexp.graphic_style
+[griffon-pool-1-thread-1] TRACE griffon.core.editors.PropertyEditorResolver - Searching PropertyEditor for javafx.scene.image.Image
+[griffon-pool-1-thread-1] TRACE griffon.core.editors.PropertyEditorResolver - PropertyEditor for javafx.scene.image.Image is griffon.javafx.editors.ImagePropertyEditor
+[griffon-pool-1-thread-1] TRACE org.codehaus.griffon.runtime.core.controller.AbstractActionManager - Action for WP.WealthProphetController.addOexp stored as addOexp
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.AddSexp.name
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.AddSexp.name
+[griffon-pool-1-thread-1] TRACE org.codehaus.griffon.runtime.javafx.controller.JavaFXActionManager - WP.WealthProphetController.action.AddSexp.name = Add Sexp
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.AddSexp.accelerator
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.AddSexp.accelerator
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.AddSexp.description
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.AddSexp.description
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.AddSexp.icon
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.AddSexp.icon
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.AddSexp.image
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.AddSexp.image
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.AddSexp.enabled
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.AddSexp.enabled
+[griffon-pool-1-thread-1] TRACE org.codehaus.griffon.runtime.javafx.controller.JavaFXActionManager - WP.WealthProphetController.action.AddSexp.enabled = true
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.AddSexp.selected
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.AddSexp.selected
+[griffon-pool-1-thread-1] TRACE org.codehaus.griffon.runtime.javafx.controller.JavaFXActionManager - WP.WealthProphetController.action.AddSexp.selected = false
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.AddSexp.visible
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.AddSexp.visible
+[griffon-pool-1-thread-1] TRACE org.codehaus.griffon.runtime.javafx.controller.JavaFXActionManager - WP.WealthProphetController.action.AddSexp.visible = true
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.AddSexp.styleclass
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.AddSexp.styleclass
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.AddSexp.style
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.AddSexp.style
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.AddSexp.graphic_styleclass
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.AddSexp.graphic_styleclass
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.AddSexp.graphic_style
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.AddSexp.graphic_style
+[griffon-pool-1-thread-1] TRACE griffon.core.editors.PropertyEditorResolver - Searching PropertyEditor for javafx.scene.image.Image
+[griffon-pool-1-thread-1] TRACE griffon.core.editors.PropertyEditorResolver - PropertyEditor for javafx.scene.image.Image is griffon.javafx.editors.ImagePropertyEditor
+[griffon-pool-1-thread-1] TRACE org.codehaus.griffon.runtime.core.controller.AbstractActionManager - Action for WP.WealthProphetController.addSexp stored as addSexp
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.Click.name
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.Click.name
+[griffon-pool-1-thread-1] TRACE org.codehaus.griffon.runtime.javafx.controller.JavaFXActionManager - WP.WealthProphetController.action.Click.name = Click
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.Click.accelerator
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.Click.accelerator
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.Click.description
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.Click.description
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.Click.icon
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.Click.icon
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.Click.image
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.Click.image
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.Click.enabled
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.Click.enabled
+[griffon-pool-1-thread-1] TRACE org.codehaus.griffon.runtime.javafx.controller.JavaFXActionManager - WP.WealthProphetController.action.Click.enabled = true
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.Click.selected
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.Click.selected
+[griffon-pool-1-thread-1] TRACE org.codehaus.griffon.runtime.javafx.controller.JavaFXActionManager - WP.WealthProphetController.action.Click.selected = false
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.Click.visible
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.Click.visible
+[griffon-pool-1-thread-1] TRACE org.codehaus.griffon.runtime.javafx.controller.JavaFXActionManager - WP.WealthProphetController.action.Click.visible = true
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.Click.styleclass
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.Click.styleclass
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.Click.style
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.Click.style
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.Click.graphic_styleclass
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.Click.graphic_styleclass
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.Click.graphic_style
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.Click.graphic_style
+[griffon-pool-1-thread-1] TRACE griffon.core.editors.PropertyEditorResolver - Searching PropertyEditor for javafx.scene.image.Image
+[griffon-pool-1-thread-1] TRACE griffon.core.editors.PropertyEditorResolver - PropertyEditor for javafx.scene.image.Image is griffon.javafx.editors.ImagePropertyEditor
+[griffon-pool-1-thread-1] TRACE org.codehaus.griffon.runtime.core.controller.AbstractActionManager - Action for WP.WealthProphetController.click stored as click
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.NextYear.name
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.NextYear.name
+[griffon-pool-1-thread-1] TRACE org.codehaus.griffon.runtime.javafx.controller.JavaFXActionManager - WP.WealthProphetController.action.NextYear.name = Next Year
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.NextYear.accelerator
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.NextYear.accelerator
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.NextYear.description
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.NextYear.description
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.NextYear.icon
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.NextYear.icon
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.NextYear.image
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.NextYear.image
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.NextYear.enabled
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.NextYear.enabled
+[griffon-pool-1-thread-1] TRACE org.codehaus.griffon.runtime.javafx.controller.JavaFXActionManager - WP.WealthProphetController.action.NextYear.enabled = true
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.NextYear.selected
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.NextYear.selected
+[griffon-pool-1-thread-1] TRACE org.codehaus.griffon.runtime.javafx.controller.JavaFXActionManager - WP.WealthProphetController.action.NextYear.selected = false
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.NextYear.visible
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.NextYear.visible
+[griffon-pool-1-thread-1] TRACE org.codehaus.griffon.runtime.javafx.controller.JavaFXActionManager - WP.WealthProphetController.action.NextYear.visible = true
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.NextYear.styleclass
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.NextYear.styleclass
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.NextYear.style
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.NextYear.style
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.NextYear.graphic_styleclass
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.NextYear.graphic_styleclass
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.NextYear.graphic_style
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.NextYear.graphic_style
+[griffon-pool-1-thread-1] TRACE griffon.core.editors.PropertyEditorResolver - Searching PropertyEditor for javafx.scene.image.Image
+[griffon-pool-1-thread-1] TRACE griffon.core.editors.PropertyEditorResolver - PropertyEditor for javafx.scene.image.Image is griffon.javafx.editors.ImagePropertyEditor
+[griffon-pool-1-thread-1] TRACE org.codehaus.griffon.runtime.core.controller.AbstractActionManager - Action for WP.WealthProphetController.nextYear stored as nextYear
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.SwitchSc.name
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.SwitchSc.name
+[griffon-pool-1-thread-1] TRACE org.codehaus.griffon.runtime.javafx.controller.JavaFXActionManager - WP.WealthProphetController.action.SwitchSc.name = Switch Sc
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.SwitchSc.accelerator
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.SwitchSc.accelerator
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.SwitchSc.description
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.SwitchSc.description
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.SwitchSc.icon
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.SwitchSc.icon
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.SwitchSc.image
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.SwitchSc.image
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.SwitchSc.enabled
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.SwitchSc.enabled
+[griffon-pool-1-thread-1] TRACE org.codehaus.griffon.runtime.javafx.controller.JavaFXActionManager - WP.WealthProphetController.action.SwitchSc.enabled = true
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.SwitchSc.selected
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.SwitchSc.selected
+[griffon-pool-1-thread-1] TRACE org.codehaus.griffon.runtime.javafx.controller.JavaFXActionManager - WP.WealthProphetController.action.SwitchSc.selected = false
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.SwitchSc.visible
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.SwitchSc.visible
+[griffon-pool-1-thread-1] TRACE org.codehaus.griffon.runtime.javafx.controller.JavaFXActionManager - WP.WealthProphetController.action.SwitchSc.visible = true
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.SwitchSc.styleclass
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.SwitchSc.styleclass
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.SwitchSc.style
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.SwitchSc.style
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.SwitchSc.graphic_styleclass
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.SwitchSc.graphic_styleclass
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.SwitchSc.graphic_style
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.SwitchSc.graphic_style
+[griffon-pool-1-thread-1] TRACE griffon.core.editors.PropertyEditorResolver - Searching PropertyEditor for javafx.scene.image.Image
+[griffon-pool-1-thread-1] TRACE griffon.core.editors.PropertyEditorResolver - PropertyEditor for javafx.scene.image.Image is griffon.javafx.editors.ImagePropertyEditor
+[griffon-pool-1-thread-1] TRACE org.codehaus.griffon.runtime.core.controller.AbstractActionManager - Action for WP.WealthProphetController.switchSc stored as switchSc
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.UpdatePie.name
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.UpdatePie.name
+[griffon-pool-1-thread-1] TRACE org.codehaus.griffon.runtime.javafx.controller.JavaFXActionManager - WP.WealthProphetController.action.UpdatePie.name = Update Pie
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.UpdatePie.accelerator
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.UpdatePie.accelerator
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.UpdatePie.description
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.UpdatePie.description
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.UpdatePie.icon
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.UpdatePie.icon
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.UpdatePie.image
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.UpdatePie.image
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.UpdatePie.enabled
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.UpdatePie.enabled
+[griffon-pool-1-thread-1] TRACE org.codehaus.griffon.runtime.javafx.controller.JavaFXActionManager - WP.WealthProphetController.action.UpdatePie.enabled = true
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.UpdatePie.selected
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.UpdatePie.selected
+[griffon-pool-1-thread-1] TRACE org.codehaus.griffon.runtime.javafx.controller.JavaFXActionManager - WP.WealthProphetController.action.UpdatePie.selected = false
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.UpdatePie.visible
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.UpdatePie.visible
+[griffon-pool-1-thread-1] TRACE org.codehaus.griffon.runtime.javafx.controller.JavaFXActionManager - WP.WealthProphetController.action.UpdatePie.visible = true
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.UpdatePie.styleclass
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.UpdatePie.styleclass
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.UpdatePie.style
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.UpdatePie.style
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.UpdatePie.graphic_styleclass
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.UpdatePie.graphic_styleclass
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=WP.WealthProphetController.action.UpdatePie.graphic_style
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.action.UpdatePie.graphic_style
+[griffon-pool-1-thread-1] TRACE griffon.core.editors.PropertyEditorResolver - Searching PropertyEditor for javafx.scene.image.Image
+[griffon-pool-1-thread-1] TRACE griffon.core.editors.PropertyEditorResolver - PropertyEditor for javafx.scene.image.Image is griffon.javafx.editors.ImagePropertyEditor
+[griffon-pool-1-thread-1] TRACE org.codehaus.griffon.runtime.core.controller.AbstractActionManager - Action for WP.WealthProphetController.updatePie stored as updatePie
+[griffon-pool-1-thread-1] DEBUG griffon.util.AnnotationUtils - Current customizer order is [core, javafx]
+[griffon-pool-1-thread-1] TRACE griffon.util.AnnotationUtils - Processing customizer 'core'
+[griffon-pool-1-thread-1] TRACE griffon.util.AnnotationUtils -   depends on '[]'
+[griffon-pool-1-thread-1] TRACE griffon.util.AnnotationUtils -   adding customizer 'core', since all dependencies have been added
+[griffon-pool-1-thread-1] TRACE griffon.util.AnnotationUtils - Processing customizer 'javafx'
+[griffon-pool-1-thread-1] TRACE griffon.util.AnnotationUtils -   depends on '[core]'
+[griffon-pool-1-thread-1] TRACE griffon.util.AnnotationUtils -   checking customizer 'javafx' dependencies (1)
+[griffon-pool-1-thread-1] TRACE griffon.util.AnnotationUtils -   checking customizer 'javafx' dependencies: 
+[griffon-pool-1-thread-1] TRACE griffon.util.AnnotationUtils -   customizer 'javafx' dependency 'core' already added
+[griffon-pool-1-thread-1] TRACE griffon.util.AnnotationUtils -   adding customizer 'javafx', since all dependencies have been added
+[griffon-pool-1-thread-1] TRACE griffon.util.AnnotationUtils - customizer dependency ordering complete
+[griffon-pool-1-thread-1] DEBUG griffon.util.AnnotationUtils - computed customizer order is [core, javafx]
+[griffon-pool-1-thread-1] DEBUG org.codehaus.griffon.runtime.core.event.AbstractEventRouter - Triggering event 'InitializeMVCGroup' synchronously
+[griffon-pool-1-thread-1] TRACE griffon.addon.GroovyAddon - Adding action addAssAction to wealthProphet:wealthProphet:builder
+[griffon-pool-1-thread-1] TRACE griffon.addon.GroovyAddon - Adding action addBexpAction to wealthProphet:wealthProphet:builder
+[griffon-pool-1-thread-1] TRACE griffon.addon.GroovyAddon - Adding action addIncomeAction to wealthProphet:wealthProphet:builder
+[griffon-pool-1-thread-1] TRACE griffon.addon.GroovyAddon - Adding action addLiabAction to wealthProphet:wealthProphet:builder
+[griffon-pool-1-thread-1] TRACE griffon.addon.GroovyAddon - Adding action addOexpAction to wealthProphet:wealthProphet:builder
+[griffon-pool-1-thread-1] TRACE griffon.addon.GroovyAddon - Adding action addSexpAction to wealthProphet:wealthProphet:builder
+[griffon-pool-1-thread-1] TRACE griffon.addon.GroovyAddon - Adding action clickAction to wealthProphet:wealthProphet:builder
+[griffon-pool-1-thread-1] TRACE griffon.addon.GroovyAddon - Adding action nextYearAction to wealthProphet:wealthProphet:builder
+[griffon-pool-1-thread-1] TRACE griffon.addon.GroovyAddon - Adding action switchScAction to wealthProphet:wealthProphet:builder
+[griffon-pool-1-thread-1] TRACE griffon.addon.GroovyAddon - Adding action updatePieAction to wealthProphet:wealthProphet:builder
+[griffon-pool-1-thread-1] DEBUG org.codehaus.griffon.runtime.core.mvc.AbstractMVCGroupManager - Adding group wealthProphet:org.codehaus.griffon.runtime.groovy.mvc.GroovyAwareMVCGroup@356507bb[wealthProphet:wealthProphet]
+[griffon-pool-1-thread-1] DEBUG org.codehaus.griffon.runtime.core.mvc.DefaultMVCGroupManager - Initializing each MVC member of group 'wealthProphet'
+[JavaFX Application Thread] TRACE griffon.util.CompositeResourceBundle - Searching key=application.title
+[JavaFX Application Thread] TRACE griffon.util.CompositeResourceBundle - Bundle griffon.util.ExpandableResourceBundle@109ba843; key=application.title; value='wealth-prophet'
+[JavaFX Application Thread] DEBUG org.codehaus.griffon.runtime.core.view.AbstractWindowManager - Attaching window with name: 'mainWindow' at index 0 javafx.stage.Stage@26eee897
+[JavaFX Application Thread] DEBUG org.codehaus.griffon.runtime.core.event.AbstractEventRouter - Triggering event 'WindowAttached' synchronously
+[griffon-pool-1-thread-1] DEBUG org.codehaus.griffon.runtime.core.event.AbstractEventRouter - Triggering event 'CreateMVCGroup' synchronously
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.lifecycle.handler.disable
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Bundle griffon.util.ExpandableResourceBundle@109ba843; key=application; value='{title=wealth-prophet, startupGroups=[wealthProphet], autoShutdown=true}'
+[griffon-pool-1-thread-1] DEBUG org.codehaus.griffon.runtime.core.event.AbstractEventRouter - Triggering event 'StartupEnd' synchronously
+[griffon-pool-1-thread-1] DEBUG org.codehaus.griffon.runtime.core.view.AbstractWindowManager - windowManager.startingWindow configured to mainWindow
+[griffon-pool-1-thread-1] DEBUG org.codehaus.griffon.runtime.core.view.AbstractWindowManager - Selecting window mainWindow as starting window
+[griffon-pool-1-thread-1] DEBUG org.codehaus.griffon.runtime.core.view.AbstractWindowManager - Starting Window is javafx.stage.Stage@26eee897
+[griffon-pool-1-thread-1] DEBUG org.codehaus.griffon.runtime.core.event.AbstractEventRouter - Triggering event 'ReadyStart' synchronously
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application.lifecycle.handler.disable
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Searching key=application
+[griffon-pool-1-thread-1] TRACE griffon.util.CompositeResourceBundle - Bundle griffon.util.ExpandableResourceBundle@109ba843; key=application; value='{title=wealth-prophet, startupGroups=[wealthProphet], autoShutdown=true}'
+[griffon-pool-1-thread-1] DEBUG org.codehaus.griffon.runtime.core.event.AbstractEventRouter - Triggering event 'ReadyEnd' synchronously
+[JavaFX Application Thread] DEBUG org.codehaus.griffon.runtime.core.view.AbstractWindowManager - Showing window with name: 'mainWindow' at index 0 javafx.stage.Stage@26eee897
+[JavaFX Application Thread] TRACE griffon.util.CompositeResourceBundle - Searching key=windowManager
+[JavaFX Application Thread] TRACE griffon.util.CompositeResourceBundle - Searching key=windowManager
+[JavaFX Application Thread] TRACE griffon.util.CompositeResourceBundle - Searching key=windowManager
+[JavaFX Application Thread] TRACE griffon.util.CompositeResourceBundle - Searching key=windowManager
+[JavaFX Application Thread] TRACE org.codehaus.griffon.runtime.core.view.ConfigurableWindowDisplayHandler - Showing mainWindow with default handler
+[JavaFX Application Thread] TRACE griffon.util.CompositeResourceBundle - Searching key=windowManager
+[JavaFX Application Thread] TRACE griffon.util.CompositeResourceBundle - Searching key=windowManager
+[JavaFX Application Thread] DEBUG org.codehaus.griffon.runtime.core.event.AbstractEventRouter - Triggering event 'WindowShown' synchronously
+[Test worker] DEBUG org.codehaus.griffon.runtime.core.event.AbstractEventRouter - Triggering event 'ShutdownRequested' synchronously
+[Test worker] INFO org.codehaus.griffon.runtime.javafx.TestJavaFXGriffonApplication - Shutdown is in process
+[Test worker] DEBUG org.codehaus.griffon.runtime.javafx.TestJavaFXGriffonApplication - Shutdown stage 1: notify all event listeners
+[Test worker] DEBUG org.codehaus.griffon.runtime.core.event.AbstractEventRouter - Adding listener griffon.javafx.AbstractJavaFXGriffonApplication$$Lambda$394/2064664067 on ShutdownStart
+[Test worker] DEBUG org.codehaus.griffon.runtime.core.event.AbstractEventRouter - Triggering event 'ShutdownStart' synchronously
+[Test worker] DEBUG org.codehaus.griffon.runtime.javafx.TestJavaFXGriffonApplication - Shutdown stage 2: notify all shutdown handlers
+[Test worker] DEBUG org.codehaus.griffon.runtime.javafx.TestJavaFXGriffonApplication - Shutdown stage 3: destroy all MVC groups
+[Test worker] DEBUG org.codehaus.griffon.runtime.core.mvc.AbstractMVCGroupManager - Searching group wealthProphet
+[Test worker] DEBUG org.codehaus.griffon.runtime.core.mvc.DefaultMVCGroupManager - Group 'wealthProphet' points to org.codehaus.griffon.runtime.groovy.mvc.GroovyAwareMVCGroup@356507bb[wealthProphet:wealthProphet]
+[Test worker] DEBUG org.codehaus.griffon.runtime.core.mvc.DefaultMVCGroupManager - Destroying MVC group identified by 'wealthProphet'
+[Test worker] DEBUG org.codehaus.griffon.runtime.core.event.AbstractEventRouter - Triggering event 'DestroyInstance' synchronously
+[Test worker] DEBUG org.codehaus.griffon.runtime.core.event.AbstractEventRouter - Triggering event 'DestroyInstance' synchronously
+[JavaFX Application Thread] DEBUG org.codehaus.griffon.runtime.core.view.AbstractWindowManager - Hiding window with name: 'mainWindow' at index 0 javafx.stage.Stage@26eee897
+[JavaFX Application Thread] TRACE griffon.util.CompositeResourceBundle - Searching key=windowManager
+[JavaFX Application Thread] TRACE griffon.util.CompositeResourceBundle - Searching key=windowManager
+[JavaFX Application Thread] TRACE griffon.util.CompositeResourceBundle - Searching key=windowManager
+[JavaFX Application Thread] TRACE griffon.util.CompositeResourceBundle - Searching key=windowManager
+[JavaFX Application Thread] TRACE org.codehaus.griffon.runtime.core.view.ConfigurableWindowDisplayHandler - Hiding mainWindow with default handler
+[JavaFX Application Thread] TRACE griffon.util.CompositeResourceBundle - Searching key=windowManager
+[JavaFX Application Thread] TRACE griffon.util.CompositeResourceBundle - Searching key=windowManager
+[JavaFX Application Thread] DEBUG org.codehaus.griffon.runtime.core.event.AbstractEventRouter - Triggering event 'WindowHidden' synchronously
+[Test worker] DEBUG org.codehaus.griffon.runtime.core.event.AbstractEventRouter - Triggering event 'DestroyInstance' synchronously
+[Test worker] DEBUG org.codehaus.griffon.runtime.core.mvc.AbstractMVCGroupManager - Removing group wealthProphet:org.codehaus.griffon.runtime.groovy.mvc.GroovyAwareMVCGroup@356507bb[wealthProphet:wealthProphet]
+[Test worker] DEBUG org.codehaus.griffon.runtime.core.mvc.AbstractMVCGroupManager - Searching group wealthProphet
+[Test worker] DEBUG org.codehaus.griffon.runtime.core.mvc.DefaultMVCGroupManager - Group 'wealthProphet' points to null
+[Test worker] DEBUG org.codehaus.griffon.runtime.core.event.AbstractEventRouter - Triggering event 'DestroyMVCGroup' synchronously
+[Test worker] DEBUG org.codehaus.griffon.runtime.javafx.TestJavaFXGriffonApplication - Shutdown stage 4: execute Shutdown script
+[Test worker] TRACE griffon.util.CompositeResourceBundle - Searching key=application.lifecycle.handler.disable
+[Test worker] TRACE griffon.util.CompositeResourceBundle - Searching key=application
+[Test worker] TRACE griffon.util.CompositeResourceBundle - Bundle griffon.util.ExpandableResourceBundle@109ba843; key=application; value='{title=wealth-prophet, startupGroups=[wealthProphet], autoShutdown=true}'
+[JavaFX Application Thread] DEBUG org.codehaus.griffon.runtime.core.view.AbstractWindowManager - Hiding window with name: 'mainWindow' at index 0 javafx.stage.Stage@26eee897
+]]></system-err>
+</testsuite>

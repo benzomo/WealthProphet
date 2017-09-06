@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Implementation-Title: wealth-prophet
+Build-Date: 2017-09-05
+Implementation-Version: 0.1
+Built-By: benmo
+Build-Revision: 4d787d6ace9c05ed60ae27cfb2994f260c46e8f5
+Specification-Title: wealth-prophet
+Build-Time: 17:23:10.624-0600
+Created-By: 1.8.0_141 (Oracle Corporation 25.141-b15)
+Specification-Version: 0.1
+Main-Class: WP.Launcher
+
